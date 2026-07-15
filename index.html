@@ -1,0 +1,478 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="description" content="Manutenção, instalação, treinamentos e vendas de equipamentos oftalmológicos para clínicas e hospitais no Brasil e exterior. Atendimento remoto e presencial.">
+  <meta name="keywords" content="manutenção em equipamentos diagnósticos em oftalmologia, instalação equipamentos médicos, treinamento em equipamentos oftalmológicos, vendas equipamentos diagnósticos da visão, OCTOPUS, Haag-Streit">
+  <meta name="author" content="VisualCampo">
+  <meta name="robots" content="index, follow">
+  
+  <!-- Open Graph / Social -->
+  <meta property="og:title" content="VISUALCAMPO | Manutenção, Instalação e Vendas">
+  <meta property="og:description" content="Soluções completas em equipamentos oftalmológicos (Greens, Lampada de fendas, cadeira e coluna), instalações. Atendimento remoto e presencial no Brasil e exterior.">
+  <meta property="og:type" content="website">
+
+  <!-- Schema Markup -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": ["MedicalBusiness", "Organization"],
+    "name": "VisualCampo",
+    "description": "Manutenção, instalação, treinamentos e vendas de produtos usados para clínicas, hospitais e serviços oftalmológicos.",
+    "telephone": "+5519999648833",
+    "email": "visualcampo@outlook.com",
+    "areaServed": "Worldwide"
+  }
+  </script>
+
+  <title>VisualCampo | Manutenção, Instalação e Vendas Oftalmológicas</title>
+  
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Manrope:wght@600;700;800&display=swap" rel="stylesheet">
+  
+  <style>
+    :root {
+      --color-primary: #0d3b66;
+      --color-primary-dark: #082847;
+      --color-secondary: #f4a261;
+      --color-accent: #2a9d8f;
+      --color-text: #1a1a2e;
+      --color-text-light: #6b7280;
+      --color-bg: #ffffff;
+      --color-bg-alt: #f8fafc;
+      --shadow-sm: 0 1px 2px rgba(0,0,0,0.05);
+      --shadow-md: 0 4px 12px rgba(0,0,0,0.08);
+      --shadow-lg: 0 10px 30px rgba(0,0,0,0.12);
+      --radius: 12px;
+      --radius-lg: 20px;
+      --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+      --container: 1200px;
+    }
+
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      font-family: 'Inter', sans-serif;
+      color: var(--color-text);
+      line-height: 1.6;
+      background: var(--color-bg);
+      overflow-x: hidden;
+    }
+
+    .container { max-width: var(--container); margin: 0 auto; padding: 0 1.5rem; }
+    .section { padding: 5rem 0; }
+    .section-title {
+      font-family: 'Manrope', sans-serif;
+      font-size: clamp(1.75rem, 4vw, 2.5rem);
+      font-weight: 700;
+      margin-bottom: 1rem;
+      color: var(--color-primary);
+    }
+    .section-subtitle {
+      font-size: 1.125rem;
+      color: var(--color-text-light);
+      max-width: 65ch;
+      margin-bottom: 3rem;
+    }
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      padding: 0.875rem 1.75rem;
+      background: var(--color-primary);
+      color: white;
+      border: none;
+      border-radius: 50px;
+      font-weight: 600;
+      text-decoration: none;
+      transition: var(--transition);
+      cursor: pointer;
+      box-shadow: var(--shadow-md);
+    }
+    .btn:hover { transform: translateY(-2px); box-shadow: var(--shadow-lg); background: var(--color-primary-dark); }
+    .btn-secondary { background: white; color: var(--color-primary); border: 2px solid var(--color-primary); }
+    .btn-secondary:hover { background: var(--color-primary); color: white; }
+    .btn-whatsapp { background: #25D366; color: white; }
+    .btn-whatsapp:hover { background: #128C7E; transform: translateY(-2px); }
+    .btn-email { background: var(--color-secondary); color: white; }
+    .btn-email:hover { background: #e89146; transform: translateY(-2px); }
+
+    .header {
+      position: sticky; top: 0; z-index: 1000;
+      background: rgba(255,255,255,0.95);
+      backdrop-filter: blur(10px);
+      border-bottom: 1px solid rgba(0,0,0,0.05);
+      transition: var(--transition);
+    }
+    .header.scrolled { box-shadow: var(--shadow-md); }
+    .nav { display: flex; justify-content: space-between; align-items: center; padding: 1rem 0; }
+    .logo {
+      font-family: 'Manrope', sans-serif; font-weight: 800; font-size: 1.5rem;
+      color: var(--color-primary); text-decoration: none; display: flex; align-items: center; gap: 0.5rem;
+    }
+    .logo-icon {
+      width: 32px; height: 32px; background: var(--color-accent); border-radius: 8px;
+      display: grid; place-items: center; color: white; font-weight: 700;
+    }
+    .nav-links { display: flex; gap: 2rem; list-style: none; }
+    .nav-links a { text-decoration: none; color: var(--color-text); font-weight: 500; transition: var(--transition); position: relative; }
+    .nav-links a:hover { color: var(--color-primary); }
+    .nav-links a::after { content: ''; position: absolute; bottom: -4px; left: 0; width: 0; height: 2px; background: var(--color-primary); transition: var(--transition); }
+    .nav-links a:hover::after { width: 100%; }
+    .nav-cta { display: flex; gap: 1rem; align-items: center; }
+    .mobile-toggle { display: none; font-size: 1.5rem; background: none; border: none; cursor: pointer; }
+
+    .hero {
+      padding: 6rem 0 4rem;
+      background: linear-gradient(135deg, var(--color-bg-alt) 0%, white 100%);
+      position: relative; overflow: hidden;
+    }
+    .hero::before {
+      content: ''; position: absolute; top: -50%; right: -20%; width: 60%; height: 120%;
+      background: radial-gradient(circle, rgba(42,157,143,0.08) 0%, transparent 70%); border-radius: 50%; z-index: 0;
+    }
+    .hero-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 3rem; align-items: center; position: relative; z-index: 1; }
+    .hero-content h1 {
+      font-family: 'Manrope', sans-serif; font-size: clamp(2rem, 5vw, 3.2rem);
+      font-weight: 800; line-height: 1.1; margin-bottom: 1.5rem; color: var(--color-primary);
+    }
+    .hero-content p { font-size: 1.25rem; color: var(--color-text-light); margin-bottom: 2rem; max-width: 55ch; }
+    .hero-ctas { display: flex; gap: 1rem; flex-wrap: wrap; margin-bottom: 2.5rem; }
+    .hero-badges { display: flex; gap: 1.5rem; flex-wrap: wrap; }
+    .badge {
+      display: flex; align-items: center; gap: 0.5rem; padding: 0.5rem 1rem;
+      background: white; border-radius: 50px; box-shadow: var(--shadow-sm); font-size: 0.875rem; font-weight: 500;
+    }
+    .badge-icon {
+      width: 20px; height: 20px; background: var(--color-accent); border-radius: 50%;
+      display: grid; place-items: center; color: white; font-size: 0.75rem;
+    }
+    .hero-image {
+      position: relative; border-radius: var(--radius-lg); overflow: hidden; box-shadow: var(--shadow-lg);
+      aspect-ratio: 4/3; background: linear-gradient(135deg, var(--color-primary) 0%, var(--color-accent) 100%);
+      display: grid; place-items: center; color: white; font-weight: 600; text-align: center; padding: 2rem;
+    }
+
+    .services { background: var(--color-bg-alt); }
+    .services-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1.5rem; }
+    .service-card {
+      background: white; padding: 2rem; border-radius: var(--radius); box-shadow: var(--shadow-sm);
+      transition: var(--transition); border: 1px solid transparent;
+    }
+    .service-card:hover { transform: translateY(-4px); box-shadow: var(--shadow-lg); border-color: rgba(42,157,143,0.3); }
+    .service-icon {
+      width: 48px; height: 48px; background: linear-gradient(135deg, var(--color-primary), var(--color-accent));
+      border-radius: 12px; display: grid; place-items: center; color: white; font-size: 1.25rem; margin-bottom: 1rem;
+    }
+    .service-card h3 { font-size: 1.25rem; margin-bottom: 0.75rem; color: var(--color-primary); }
+    .service-card p { color: var(--color-text-light); margin-bottom: 1rem; font-size: 0.95rem; }
+    .service-link { color: var(--color-primary); text-decoration: none; font-weight: 500; display: inline-flex; align-items: center; gap: 0.25rem; transition: var(--transition); }
+    .service-link:hover { gap: 0.5rem; }
+
+    .coverage { background: white; text-align: center; }
+    .coverage-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 2rem; margin-top: 3rem; }
+    .coverage-item { padding: 2rem 1rem; border: 1px solid #eee; border-radius: var(--radius); transition: var(--transition); }
+    .coverage-item:hover { border-color: var(--color-accent); box-shadow: var(--shadow-md); }
+    .coverage-icon { font-size: 2.5rem; margin-bottom: 1rem; }
+
+    .cta-section {
+      background: linear-gradient(135deg, var(--color-primary) 0%, var(--color-primary-dark) 100%);
+      color: white; text-align: center; padding: 4rem 0;
+    }
+    .cta-section h2 { font-family: 'Manrope', sans-serif; font-size: clamp(1.75rem, 4vw, 2.5rem); margin-bottom: 1rem; }
+    .cta-section p { max-width: 60ch; margin: 0 auto 2rem; opacity: 0.9; font-size: 1.1rem; }
+    .cta-buttons { display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap; }
+
+    .footer { background: var(--color-text); color: white; padding: 4rem 0 2rem; }
+    .footer-grid { display: grid; grid-template-columns: 2fr 1fr 1fr; gap: 2rem; margin-bottom: 3rem; }
+    .footer-brand p { opacity: 0.8; margin: 1rem 0; max-width: 40ch; }
+    .footer-links h4 { margin-bottom: 1rem; font-size: 1.1rem; }
+    .footer-links ul { list-style: none; }
+    .footer-links li { margin-bottom: 0.5rem; }
+    .footer-links a { color: rgba(255,255,255,0.8); text-decoration: none; transition: var(--transition); display: block; }
+    .footer-links a:hover { color: var(--color-secondary); transform: translateX(4px); }
+    .footer-bottom { text-align: center; padding-top: 2rem; border-top: 1px solid rgba(255,255,255,0.1); font-size: 0.875rem; opacity: 0.7; }
+    .contact-info { display: flex; flex-direction: column; gap: 0.75rem; margin-top: 1rem; }
+    .contact-item { display: flex; align-items: center; gap: 0.75rem; font-size: 0.95rem; }
+    .contact-item a { color: white; text-decoration: none; }
+    .contact-item a:hover { color: var(--color-secondary); }
+
+    .whatsapp-float {
+      position: fixed; bottom: 1.5rem; right: 1.5rem; z-index: 999; background: #25D366; color: white;
+      width: 60px; height: 60px; border-radius: 50%; display: grid; place-items: center; font-size: 1.75rem;
+      box-shadow: var(--shadow-lg); text-decoration: none; transition: var(--transition); animation: pulse 2s infinite;
+    }
+    .whatsapp-float:hover { transform: scale(1.1); animation: none; }
+    @keyframes pulse {
+      0% { box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.7); }
+      70% { box-shadow: 0 0 0 15px rgba(37, 211, 102, 0); }
+      100% { box-shadow: 0 0 0 0 rgba(37, 211, 102, 0); }
+    }
+
+    @keyframes fadeInUp { from { opacity: 0; transform: translateY(30px); } to { opacity: 1; transform: translateY(0); } }
+    .animate { animation: fadeInUp 0.6s ease forwards; }
+    .delay-1 { animation-delay: 0.1s; }
+    .delay-2 { animation-delay: 0.2s; }
+
+    @media (max-width: 992px) {
+      .hero-grid, .footer-grid { grid-template-columns: 1fr; text-align: center; }
+      .hero-content p, .section-subtitle { margin-left: auto; margin-right: auto; }
+      .hero-ctas, .hero-badges { justify-content: center; }
+      .nav-links { display: none; }
+      .mobile-toggle { display: block; }
+      .nav.active .nav-links {
+        display: flex; flex-direction: column; position: absolute; top: 100%; left: 0; right: 0;
+        background: white; padding: 1rem; box-shadow: var(--shadow-md); gap: 1rem;
+      }
+    }
+    @media (max-width: 480px) {
+      .section { padding: 3rem 0; }
+      .btn { width: 100%; justify-content: center; }
+      .hero-ctas { flex-direction: column; }
+    }
+  </style>
+</head>
+<body>
+  <header class="header" id="header">
+    <div class="container">
+      <nav class="nav">
+        <a href="/" class="logo">
+          <span class="logo-icon">VC</span>
+          VisualCampo
+        </a>
+        <button class="mobile-toggle" aria-label="Menu" id="mobileToggle">☰</button>
+        <ul class="nav-links" id="navLinks">
+          <li><a href="#servicos">Serviços</a></li>
+          <li><a href="#cobertura">Cobertura</a></li>
+          <li><a href="#contato">Contato</a></li>
+        </ul>
+        <div class="nav-cta">
+          <a href="https://wa.me/5519999648833" class="btn btn-whatsapp" target="_blank" rel="noopener">
+            💬 WhatsApp
+          </a>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main-content">
+    <!-- Hero Section -->
+    <section class="hero">
+      <div class="container">
+        <div class="hero-grid">
+          <div class="hero-content animate">
+            <h1>Manutenção, Instalação e Vendas para Oftalmologia</h1>
+            <p>Soluções técnicas completas para clínicas, hospitais e serviços oftalmológicos. Atendimento presencial e remoto em todo o Brasil e exterior.</p>
+            <div class="hero-ctas">
+              <a href="https://wa.me/5519999648833?text=Olá! Vim pelo site e gostaria de mais informações." class="btn btn-whatsapp" target="_blank" rel="noopener">💬 Falar no WhatsApp</a>
+              <a href="mailto:visualcampo@outlook.com" class="btn btn-email">✉️ Enviar E-mail</a>
+            </div>
+            <div class="hero-badges">
+              <span class="badge"><span class="badge-icon">✓</span> Atendimento Remoto & Presencial</span>
+              <span class="badge"><span class="badge-icon">✓</span> Brasil e Exterior</span>
+              <span class="badge"><span class="badge-icon">✓</span> +20 anos de experiência</span>
+            </div>
+          </div>
+          <div class="hero-image animate delay-1" role="img" aria-label="Equipamento oftalmológico">
+            <div>
+              <div style="font-size: 3rem; margin-bottom: 1rem;">🔬</div>
+              <div style="font-size: 1.25rem;">Tecnologia e Precisão</div>
+              <div style="font-size: 0.9rem; opacity: 0.9; margin-top: 0.5rem;">Manutenção especializada e equipamentos de alta tecnologia</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Services Section -->
+    <section class="section services" id="servicos">
+      <div class="container">
+        <h2 class="section-title">Nossas Soluções</h2>
+        <p class="section-subtitle">Portfólio completo para garantir a eficiência e longevidade dos seus equipamentos oftalmológicos.</p>
+        
+        <div class="services-grid">
+          <article class="service-card animate">
+            <div class="service-icon">🔧</div>
+            <h3>Manutenção Técnica</h3>
+            <p>Manutenção preventiva e corretiva de equipamentos oftalmológicos, garantindo precisão diagnóstica e evitando paradas.</p>
+            <a href="https://wa.me/5519999648833?text=Olá! Gostaria de um orçamento de manutenção." class="service-link" target="_blank">Solicitar orçamento →</a>
+          </article>
+          
+          <article class="service-card animate delay-1">
+            <div class="service-icon">🏥</div>
+            <h3>Instalação & Start-up</h3>
+            <p>Instalação completa, configuração de sistemas e validação de calibração para novos equipamentos na sua clínica ou hospital. Treinamento avançado de operação.</p>
+            <a href="https://wa.me/5519999648833?text=Olá! Preciso de instalação de equipamentos." class="service-link" target="_blank">Agendar instalação →</a>
+          </article>
+          
+          <article class="service-card animate delay-2">
+            <div class="service-icon">📚</div>
+            <h3>Treinamentos</h3>
+            <p>Capacitação técnica para operadores e médicos. Maximizamos o uso dos equipamentos para um diagnóstico preciso e ágil.</p>
+            <a href="mailto:visualcampo@outlook.com?subject=Solicitação de Treinamento" class="service-link">Solicitar treinamento →</a>
+          </article>
+          
+          <article class="service-card animate">
+            <div class="service-icon">📦</div>
+            <h3>Vendas de Produtos</h3>
+            <p>Comercialização de equipamentos novos e usados, insumos e peças de reposição para o setor oftalmológico.</p>
+            <a href="https://wa.me/5519999648833?text=Olá! Tenho interesse nos produtos de vendas." class="service-link" target="_blank">Ver catálogo →</a>
+          </article>
+          
+          <article class="service-card animate delay-1">
+            <div class="service-icon">💻</div>
+            <h3>Suporte Remoto</h3>
+            <p>Atendimento técnico remoto para clínicas em todo o Brasil e exterior, resolvendo rapidamente questões de software e calibração.</p>
+            <a href="https://wa.me/5519999648833?text=Olá! Preciso de suporte remoto." class="service-link" target="_blank">Acionar suporte →</a>
+          </article>
+          
+          <article class="service-card animate delay-2">
+            <div class="service-icon">💡</div>
+            <h3>Assessoria Especializada</h3>
+            <p>Consultoria para escolha estratégica de tecnologia, otimização de fluxo de diagnóstico e infraestrutura clínica.</p>
+            <a href="mailto:visualcampo@outlook.com?subject=Assessoria Especializada" class="service-link">Falar com especialista →</a>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Coverage Section -->
+    <section class="section coverage" id="cobertura">
+      <div class="container">
+        <h2 class="section-title" style="text-align: center;">Área de Atendimento</h2>
+        <p class="section-subtitle" style="text-align: center; margin-left: auto; margin-right: auto;">Levamos excelência técnica para qualquer lugar, com flexibilidade total na forma de atendimento.</p>
+        
+        <div class="coverage-grid">
+          <div class="coverage-item animate">
+            <div class="coverage-icon">🌍</div>
+            <h3>Brasil e Exterior</h3>
+            <p>Atendemos clínicas e hospitais em todas as regiões do Brasil e internacionais.</p>
+          </div>
+          <div class="coverage-item animate delay-1">
+            <div class="coverage-icon">✈️</div>
+            <h3>Atendimento Presencial</h3>
+            <p>Deslocamento de técnicos especializados para intervenções complexas e instalações in loco.</p>
+          </div>
+          <div class="coverage-item animate delay-2">
+            <div class="coverage-icon">🌐</div>
+            <h3>Atendimento Remoto</h3>
+            <p>Suporte rápido e eficiente via internet, resolvendo a maioria das ocorrências sem custo de deslocamento.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta-section" id="contato">
+      <div class="container">
+        <h2>Pronto para otimizar sua clínica?</h2>
+        <p>Entre em contato agora mesmo para orçamentos, visitas técnicas ou tirar dúvidas. Estamos prontos para atender você onde estiver!</p>
+        <div class="cta-buttons">
+          <a href="https://wa.me/5519999648833?text=Olá! Gostaria de atendimento." class="btn btn-whatsapp" target="_blank" rel="noopener">
+            💬 Chamar no WhatsApp
+          </a>
+          <a href="mailto:visualcampo@outlook.com" class="btn btn-email">
+            ✉️ visualcampo@outlook.com
+          </a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="/" class="logo" style="color: white; margin-bottom: 1rem; display: inline-flex; align-items: center; gap: 0.5rem;">
+            <span class="logo-icon">VC</span>
+            VisualCampo
+          </a>
+          <p>Excelência em manutenção, instalação, treinamentos e vendas de produtos para clínicas e hospitais oftalmológicos.</p>
+          <div class="contact-info">
+            <div class="contact-item">📱 <a href="https://wa.me/5519999648833" target="_blank">WhatsApp: (19) 99964-8833</a></div>
+            <div class="contact-item">📧 <a href="mailto:visualcampo@outlook.com">visualcampo@outlook.com</a></div>
+            <div class="contact-item">📍 Atendimento Presencial e Remoto (Brasil e Exterior)</div>
+          </div>
+        </div>
+        <div class="footer-links">
+          <h4>Serviços</h4>
+          <ul>
+            <li><a href="#servicos">Manutenção</a></li>
+            <li><a href="#servicos">Instalação</a></li>
+            <li><a href="#servicos">Treinamentos</a></li>
+            <li><a href="#servicos">Vendas</a></li>
+          </ul>
+        </div>
+        <div class="footer-links">
+          <h4>Contato</h4>
+          <ul>
+            <li><a href="https://wa.me/5519999648833" target="_blank">WhatsApp</a></li>
+            <li><a href="mailto:visualcampo@outlook.com">E-mail</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2024 VisualCampo. Todos os direitos reservados.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Floating WhatsApp Button -->
+  <a href="https://wa.me/5519999648833?text=Olá! Vim pelo site da VisualCampo." class="whatsapp-float" target="_blank" rel="noopener" aria-label="Falar no WhatsApp">
+    💬
+  </a>
+
+  <script>
+    const header = document.getElementById('header');
+    window.addEventListener('scroll', () => {
+      if (window.scrollY > 50) header.classList.add('scrolled');
+      else header.classList.remove('scrolled');
+    });
+
+    const mobileToggle = document.getElementById('mobileToggle');
+    const nav = document.querySelector('.nav');
+    mobileToggle.addEventListener('click', () => {
+      nav.classList.toggle('active');
+      mobileToggle.textContent = nav.classList.contains('active') ? '✕' : '☰';
+    });
+
+    document.querySelectorAll('.nav-links a').forEach(link => {
+      link.addEventListener('click', () => {
+        nav.classList.remove('active');
+        mobileToggle.textContent = '☰';
+      });
+    });
+
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function(e) {
+        const target = document.querySelector(this.getAttribute('href'));
+        if (target) {
+          e.preventDefault();
+          target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        }
+      });
+    });
+
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.style.opacity = '1';
+          entry.target.style.transform = 'translateY(0)';
+          observer.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.1 });
+
+    document.querySelectorAll('.animate').forEach(el => {
+      el.style.opacity = '0';
+      el.style.transform = 'translateY(20px)';
+      el.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+      observer.observe(el);
+    });
+  </script>
+</body>
+</html>
