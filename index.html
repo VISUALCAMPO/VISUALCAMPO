@@ -3,14 +3,14 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <meta name="description" content="Manutenção, instalação, treinamentos e vendas de equipamentos oftalmológicos para clínicas e hospitais no Brasil e exterior. Atendimento remoto e presencial.">
-  <meta name="keywords" content="manutenção em equipamentos diagnósticos em oftalmologia, instalação equipamentos médicos, treinamento em equipamentos oftalmológicos, vendas equipamentos diagnósticos da visão, OCTOPUS, Haag-Streit">
+  <meta name="description" content="Especialistas em manutenção, instalação e treinamento de Campo Visual Computadorizado (Octopus Interzeag/Haag-Streit). Base em Ribeirão Preto, atendimento em BH e todo o Brasil.">
+  <meta name="keywords" content="manutenção campo visual, Octopus Interzeag, Haag-Streit, equipamentos oftalmológicos, Ribeirão Preto, Belo Horizonte, manutenção preventiva, Daniel especialista Octopus">
   <meta name="author" content="VisualCampo">
   <meta name="robots" content="index, follow">
   
   <!-- Open Graph / Social -->
-  <meta property="og:title" content="VISUALCAMPO | Manutenção, Instalação e Vendas">
-  <meta property="og:description" content="Soluções completas em equipamentos oftalmológicos (Greens, Lampada de fendas, cadeira e coluna), instalações. Atendimento remoto e presencial no Brasil e exterior.">
+  <meta property="og:title" content="VISUALCAMPO | Especialistas em Campo Visual Octopus">
+  <meta property="og:description" content="Manutenção, instalação e treinamentos com padrão internacional (Treinamento Suíça). Agenda especial BH a partir de Setembro/2026.">
   <meta property="og:type" content="website">
 
   <!-- Schema Markup -->
@@ -19,14 +19,21 @@
     "@context": "https://schema.org",
     "@type": ["MedicalBusiness", "Organization"],
     "name": "VisualCampo",
-    "description": "Manutenção, instalação, treinamentos e vendas de produtos usados para clínicas, hospitais e serviços oftalmológicos.",
+    "description": "Manutenção especializada, instalação e treinamentos em Campo Visual Computadorizado (Octopus Interzeag/Haag-Streit) e equipamentos diagnósticos.",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Ribeirão Preto",
+      "addressRegion": "SP",
+      "postalCode": "14015-100",
+      "addressCountry": "BR"
+    },
     "telephone": "+5519999648833",
     "email": "visualcampo@outlook.com",
-    "areaServed": "Worldwide"
+    "areaServed": "Brasil e Exterior"
   }
   </script>
 
-  <title>VisualCampo | Manutenção, Instalação e Vendas Oftalmológicas</title>
+  <title>VisualCampo | Especialistas em Campo Visual Octopus e Equipamentos Oftalmológicos</title>
   
   <!-- Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -61,6 +68,17 @@
       background: var(--color-bg);
       overflow-x: hidden;
     }
+
+    .top-bar {
+      background: var(--color-secondary);
+      color: white;
+      text-align: center;
+      padding: 0.6rem 1rem;
+      font-weight: 600;
+      font-size: 0.9rem;
+      letter-spacing: 0.5px;
+    }
+    .top-bar a { color: white; text-decoration: underline; margin-left: 0.5rem; }
 
     .container { max-width: var(--container); margin: 0 auto; padding: 0 1.5rem; }
     .section { padding: 5rem 0; }
@@ -126,7 +144,7 @@
     .mobile-toggle { display: none; font-size: 1.5rem; background: none; border: none; cursor: pointer; }
 
     .hero {
-      padding: 6rem 0 4rem;
+      padding: 4rem 0 5rem;
       background: linear-gradient(135deg, var(--color-bg-alt) 0%, white 100%);
       position: relative; overflow: hidden;
     }
@@ -137,14 +155,24 @@
     .hero-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 3rem; align-items: center; position: relative; z-index: 1; }
     .hero-content h1 {
       font-family: 'Manrope', sans-serif; font-size: clamp(2rem, 5vw, 3.2rem);
-      font-weight: 800; line-height: 1.1; margin-bottom: 1.5rem; color: var(--color-primary);
+      font-weight: 800; line-height: 1.1; margin-bottom: 1rem; color: var(--color-primary);
+    }
+    .hero-highlight {
+      color: var(--color-accent);
+      display: block;
+      font-size: 0.6em;
+      font-weight: 600;
+      margin-bottom: 0.5rem;
+      text-transform: uppercase;
+      letter-spacing: 1px;
     }
     .hero-content p { font-size: 1.25rem; color: var(--color-text-light); margin-bottom: 2rem; max-width: 55ch; }
     .hero-ctas { display: flex; gap: 1rem; flex-wrap: wrap; margin-bottom: 2.5rem; }
-    .hero-badges { display: flex; gap: 1.5rem; flex-wrap: wrap; }
+    .hero-badges { display: flex; gap: 1rem; flex-wrap: wrap; }
     .badge {
       display: flex; align-items: center; gap: 0.5rem; padding: 0.5rem 1rem;
       background: white; border-radius: 50px; box-shadow: var(--shadow-sm); font-size: 0.875rem; font-weight: 500;
+      border: 1px solid rgba(0,0,0,0.05);
     }
     .badge-icon {
       width: 20px; height: 20px; background: var(--color-accent); border-radius: 50%;
@@ -157,12 +185,18 @@
     }
 
     .services { background: var(--color-bg-alt); }
-    .services-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1.5rem; }
+    .services-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 1.5rem; }
     .service-card {
       background: white; padding: 2rem; border-radius: var(--radius); box-shadow: var(--shadow-sm);
       transition: var(--transition); border: 1px solid transparent;
     }
     .service-card:hover { transform: translateY(-4px); box-shadow: var(--shadow-lg); border-color: rgba(42,157,143,0.3); }
+    .service-card.featured { border: 2px solid var(--color-secondary); position: relative; }
+    .service-card.featured::before {
+      content: '⭐ OPORTUNIDADE'; position: absolute; top: -12px; right: 20px;
+      background: var(--color-secondary); color: white; font-size: 0.75rem; font-weight: 700;
+      padding: 0.25rem 0.75rem; border-radius: 20px;
+    }
     .service-icon {
       width: 48px; height: 48px; background: linear-gradient(135deg, var(--color-primary), var(--color-accent));
       border-radius: 12px; display: grid; place-items: center; color: white; font-size: 1.25rem; margin-bottom: 1rem;
@@ -173,11 +207,14 @@
     .service-link:hover { gap: 0.5rem; }
 
     .coverage { background: white; text-align: center; }
-    .coverage-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 2rem; margin-top: 3rem; }
-    .coverage-item { padding: 2rem 1rem; border: 1px solid #eee; border-radius: var(--radius); transition: var(--transition); }
+    .coverage-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 2rem; margin-top: 3rem; }
+    .coverage-item { padding: 2rem; border: 1px solid #eee; border-radius: var(--radius); transition: var(--transition); text-align: left; }
     .coverage-item:hover { border-color: var(--color-accent); box-shadow: var(--shadow-md); }
+    .coverage-item.highlight { border-color: var(--color-primary); background: rgba(13, 59, 102, 0.03); }
     .coverage-icon { font-size: 2.5rem; margin-bottom: 1rem; }
 
+    .blog-section { background: var(--color-bg-alt); text-align: center; }
+    
     .cta-section {
       background: linear-gradient(135deg, var(--color-primary) 0%, var(--color-primary-dark) 100%);
       color: white; text-align: center; padding: 4rem 0;
@@ -227,6 +264,7 @@
         display: flex; flex-direction: column; position: absolute; top: 100%; left: 0; right: 0;
         background: white; padding: 1rem; box-shadow: var(--shadow-md); gap: 1rem;
       }
+      .coverage-item { text-align: center; }
     }
     @media (max-width: 480px) {
       .section { padding: 3rem 0; }
@@ -236,6 +274,13 @@
   </style>
 </head>
 <body>
+  
+  <!-- Barra de Urgência -->
+  <div class="top-bar">
+    📢 AGENDA TÉCNICA BELO HORIZONTE E REGIÃO: A partir de 15 de Setembro de 2026. 
+    <a href="https://wa.me/5519999648833?text=Olá! Quero garantir minha vaga na agenda de BH em Setembro/2026.">Garanta sua visita →</a>
+  </div>
+
   <header class="header" id="header">
     <div class="container">
       <nav class="nav">
@@ -245,8 +290,9 @@
         </a>
         <button class="mobile-toggle" aria-label="Menu" id="mobileToggle">☰</button>
         <ul class="nav-links" id="navLinks">
-          <li><a href="#servicos">Serviços</a></li>
-          <li><a href="#cobertura">Cobertura</a></li>
+          <li><a href="#servicos">Soluções</a></li>
+          <li><a href="#agenda">Agenda Regional</a></li>
+          <li><a href="#blog">Central Técnica</a></li>
           <li><a href="#contato">Contato</a></li>
         </ul>
         <div class="nav-cta">
@@ -264,23 +310,24 @@
       <div class="container">
         <div class="hero-grid">
           <div class="hero-content animate">
-            <h1>Manutenção, Instalação e Vendas para Oftalmologia</h1>
-            <p>Soluções técnicas completas para clínicas, hospitais e serviços oftalmológicos. Atendimento presencial e remoto em todo o Brasil e exterior.</p>
+            <span class="hero-highlight">Especialistas em Campo Visual Computadorizado</span>
+            <h1>Manutenção e Instalação <span style="color: var(--color-accent);">Octopus</span></h1>
+            <p>Soluções técnicas com padrão internacional. <strong>Especialista certificado e treinado diretamente na Interzeag / Haag-Streit (Suíça).</strong> Atendimento presencial e remoto para clínicas e hospitais.</p>
             <div class="hero-ctas">
-              <a href="https://wa.me/5519999648833?text=Olá! Vim pelo site e gostaria de mais informações." class="btn btn-whatsapp" target="_blank" rel="noopener">💬 Falar no WhatsApp</a>
-              <a href="mailto:visualcampo@outlook.com" class="btn btn-email">✉️ Enviar E-mail</a>
+              <a href="https://wa.me/5519999648833?text=Olá! Vim pelo site e gostaria de agendar uma visita técnica." class="btn btn-whatsapp" target="_blank" rel="noopener">💬 Agendar Visita Técnica</a>
+              <a href="#agenda" class="btn btn-secondary">📍 Ver Agenda BH 2026</a>
             </div>
             <div class="hero-badges">
-              <span class="badge"><span class="badge-icon">✓</span> Atendimento Remoto & Presencial</span>
-              <span class="badge"><span class="badge-icon">✓</span> Brasil e Exterior</span>
+              <span class="badge"><span class="badge-icon">🇨🇭</span> Treinamento Suíça</span>
               <span class="badge"><span class="badge-icon">✓</span> +20 anos de experiência</span>
+              <span class="badge"><span class="badge-icon">📍</span> Base: Ribeirão Preto - SP</span>
             </div>
           </div>
-          <div class="hero-image animate delay-1" role="img" aria-label="Equipamento oftalmológico">
+          <div class="hero-image animate delay-1" role="img" aria-label="Equipamento oftalmológico Octopus">
             <div>
               <div style="font-size: 3rem; margin-bottom: 1rem;">🔬</div>
               <div style="font-size: 1.25rem;">Tecnologia e Precisão</div>
-              <div style="font-size: 0.9rem; opacity: 0.9; margin-top: 0.5rem;">Manutenção especializada e equipamentos de alta tecnologia</div>
+              <div style="font-size: 0.9rem; opacity: 0.9; margin-top: 0.5rem;">Especialistas Octopus Interzeag / Haag-Streit</div>
             </div>
           </div>
         </div>
@@ -291,35 +338,35 @@
     <section class="section services" id="servicos">
       <div class="container">
         <h2 class="section-title">Nossas Soluções</h2>
-        <p class="section-subtitle">Portfólio completo para garantir a eficiência e longevidade dos seus equipamentos oftalmológicos.</p>
+        <p class="section-subtitle">Portfólio completo para garantir a eficiência, precisão diagnóstica e longevidade dos seus equipamentos.</p>
         
         <div class="services-grid">
           <article class="service-card animate">
             <div class="service-icon">🔧</div>
-            <h3>Manutenção Técnica</h3>
-            <p>Manutenção preventiva e corretiva de equipamentos oftalmológicos, garantindo precisão diagnóstica e evitando paradas.</p>
-            <a href="https://wa.me/5519999648833?text=Olá! Gostaria de um orçamento de manutenção." class="service-link" target="_blank">Solicitar orçamento →</a>
+            <h3>Manutenção Especializada</h3>
+            <p>Preventiva e corretiva de perímetros Octopus e equipamentos de diagnóstico, garantindo calibração de fábrica e evitando paradas no atendimento.</p>
+            <a href="https://wa.me/5519999648833?text=Olá! Gostaria de um orçamento de manutenção para Campo Visual." class="service-link" target="_blank">Solicitar orçamento →</a>
           </article>
           
           <article class="service-card animate delay-1">
             <div class="service-icon">🏥</div>
             <h3>Instalação & Start-up</h3>
-            <p>Instalação completa, configuração de sistemas e validação de calibração para novos equipamentos na sua clínica ou hospital. Treinamento avançado de operação.</p>
-            <a href="https://wa.me/5519999648833?text=Olá! Preciso de instalação de equipamentos." class="service-link" target="_blank">Agendar instalação →</a>
+            <p>Instalação completa, configuração de sistemas e validação de calibração. Inclui treinamento avançado de operação para sua equipe.</p>
+            <a href="https://wa.me/5519999648833?text=Olá! Preciso de instalação e start-up de equipamentos." class="service-link" target="_blank">Agendar instalação →</a>
           </article>
           
-          <article class="service-card animate delay-2">
+          <article class="service-card featured animate delay-2">
+            <div class="service-icon" style="background: var(--color-secondary);">💎</div>
+            <h3>Pacote Preventivo Integrado</h3>
+            <p>Aproveite nossa agenda regional para revisar também seus <strong>Greens, Autorrefratores e Lâmpadas de Fenda</strong> com valor especial, economizando custos futuros de deslocamento.</p>
+            <a href="https://wa.me/5519999648833?text=Olá! Tenho interesse no Pacote Preventivo Integrado para minha clínica." class="service-link" target="_blank">Solicitar pacote especial →</a>
+          </article>
+          
+          <article class="service-card animate">
             <div class="service-icon">📚</div>
             <h3>Treinamentos</h3>
             <p>Capacitação técnica para operadores e médicos. Maximizamos o uso dos equipamentos para um diagnóstico preciso e ágil.</p>
             <a href="mailto:visualcampo@outlook.com?subject=Solicitação de Treinamento" class="service-link">Solicitar treinamento →</a>
-          </article>
-          
-          <article class="service-card animate">
-            <div class="service-icon">📦</div>
-            <h3>Vendas de Produtos</h3>
-            <p>Comercialização de equipamentos novos e usados, insumos e peças de reposição para o setor oftalmológico.</p>
-            <a href="https://wa.me/5519999648833?text=Olá! Tenho interesse nos produtos de vendas." class="service-link" target="_blank">Ver catálogo →</a>
           </article>
           
           <article class="service-card animate delay-1">
@@ -330,38 +377,50 @@
           </article>
           
           <article class="service-card animate delay-2">
-            <div class="service-icon">💡</div>
-            <h3>Assessoria Especializada</h3>
-            <p>Consultoria para escolha estratégica de tecnologia, otimização de fluxo de diagnóstico e infraestrutura clínica.</p>
-            <a href="mailto:visualcampo@outlook.com?subject=Assessoria Especializada" class="service-link">Falar com especialista →</a>
+            <div class="service-icon">📦</div>
+            <h3>Vendas e Assessoria</h3>
+            <p>Comercialização de equipamentos, insumos e consultoria para escolha estratégica de tecnologia e otimização de fluxo clínico.</p>
+            <a href="https://wa.me/5519999648833?text=Olá! Tenho interesse em vendas e assessoria." class="service-link" target="_blank">Falar com especialista →</a>
           </article>
         </div>
       </div>
     </section>
 
-    <!-- Coverage Section -->
-    <section class="section coverage" id="cobertura">
+    <!-- Regional Agenda Section -->
+    <section class="section coverage" id="agenda">
       <div class="container">
-        <h2 class="section-title" style="text-align: center;">Área de Atendimento</h2>
-        <p class="section-subtitle" style="text-align: center; margin-left: auto; margin-right: auto;">Levamos excelência técnica para qualquer lugar, com flexibilidade total na forma de atendimento.</p>
+        <h2 class="section-title" style="text-align: center;">Agenda Regional & Cobertura</h2>
+        <p class="section-subtitle" style="text-align: center; margin-left: auto; margin-right: auto;">Levamos excelência técnica para qualquer lugar, com flexibilidade total e otimização de custos logísticos.</p>
         
         <div class="coverage-grid">
-          <div class="coverage-item animate">
-            <div class="coverage-icon">🌍</div>
-            <h3>Brasil e Exterior</h3>
-            <p>Atendemos clínicas e hospitais em todas as regiões do Brasil e internacionais.</p>
+          <div class="coverage-item highlight animate">
+            <div class="coverage-icon">📍</div>
+            <h3>Belo Horizonte e Região</h3>
+            <p><strong>A partir de 15/09/2026.</strong> Visita técnica presencial com condição especial de logística. Envie sua localização e lista de equipamentos para receber um pacote completo com valor otimizado.</p>
+            <a href="https://wa.me/5519999648833?text=Olá! Minha clínica é em BH/região e quero calcular a logística para Setembro/2026." class="btn btn-secondary" style="margin-top: 1rem; font-size: 0.9rem; width: 100%; justify-content: center;">Calcular minha logística</a>
           </div>
           <div class="coverage-item animate delay-1">
-            <div class="coverage-icon">✈️</div>
-            <h3>Atendimento Presencial</h3>
-            <p>Deslocamento de técnicos especializados para intervenções complexas e instalações in loco.</p>
+            <div class="coverage-icon">🌍</div>
+            <h3>Brasil e Exterior</h3>
+            <p>Atendemos clínicas e hospitais em todas as regiões, com deslocamento de técnicos especializados para intervenções complexas.</p>
           </div>
           <div class="coverage-item animate delay-2">
             <div class="coverage-icon">🌐</div>
             <h3>Atendimento Remoto</h3>
-            <p>Suporte rápido e eficiente via internet, resolvendo a maioria das ocorrências sem custo de deslocamento.</p>
+            <p>Suporte rápido e eficiente via internet, resolvendo a maioria das ocorrências de software sem custo de deslocamento.</p>
           </div>
         </div>
+      </div>
+    </section>
+
+    <!-- Blog Integration Section -->
+    <section class="section blog-section" id="blog">
+      <div class="container">
+        <h2 class="section-title">Central de Conhecimento e Suporte Técnico</h2>
+        <p class="section-subtitle" style="margin: 0 auto 2rem auto;">Acesse nosso histórico técnico, artigos e informações especializadas mantidas pelo especialista Daniel, com treinamento oficial na Interzeag (Suíça).</p>
+        <a href="https://hsoftalmologicos.blogspot.com/" target="_blank" rel="noopener" class="btn btn-secondary">
+          📚 Visitar Blog Técnico (hsoftalmologicos.blogspot.com)
+        </a>
       </div>
     </section>
 
@@ -369,7 +428,7 @@
     <section class="cta-section" id="contato">
       <div class="container">
         <h2>Pronto para otimizar sua clínica?</h2>
-        <p>Entre em contato agora mesmo para orçamentos, visitas técnicas ou tirar dúvidas. Estamos prontos para atender você onde estiver!</p>
+        <p>Entre em contato agora mesmo para orçamentos, visitas técnicas ou tirar dúvidas. Estamos prontos para atender você com a excelência que seu equipamento exige.</p>
         <div class="cta-buttons">
           <a href="https://wa.me/5519999648833?text=Olá! Gostaria de atendimento." class="btn btn-whatsapp" target="_blank" rel="noopener">
             💬 Chamar no WhatsApp
@@ -391,32 +450,33 @@
             <span class="logo-icon">VC</span>
             VisualCampo
           </a>
-          <p>Excelência em manutenção, instalação, treinamentos e vendas de produtos para clínicas e hospitais oftalmológicos.</p>
+          <p>Excelência em manutenção, instalação e treinamentos de Campo Visual Computadorizado e equipamentos diagnósticos oftalmológicos.</p>
           <div class="contact-info">
             <div class="contact-item">📱 <a href="https://wa.me/5519999648833" target="_blank">WhatsApp: (19) 99964-8833</a></div>
             <div class="contact-item">📧 <a href="mailto:visualcampo@outlook.com">visualcampo@outlook.com</a></div>
-            <div class="contact-item">📍 Atendimento Presencial e Remoto (Brasil e Exterior)</div>
+            <div class="contact-item">📍 Base Operacional: Ribeirão Preto, SP – CEP 14015-100</div>
           </div>
         </div>
         <div class="footer-links">
-          <h4>Serviços</h4>
+          <h4>Soluções</h4>
           <ul>
-            <li><a href="#servicos">Manutenção</a></li>
+            <li><a href="#servicos">Manutenção Octopus</a></li>
+            <li><a href="#servicos">Pacote Preventivo</a></li>
             <li><a href="#servicos">Instalação</a></li>
             <li><a href="#servicos">Treinamentos</a></li>
-            <li><a href="#servicos">Vendas</a></li>
           </ul>
         </div>
         <div class="footer-links">
-          <h4>Contato</h4>
+          <h4>Recursos</h4>
           <ul>
-            <li><a href="https://wa.me/5519999648833" target="_blank">WhatsApp</a></li>
-            <li><a href="mailto:visualcampo@outlook.com">E-mail</a></li>
+            <li><a href="#agenda">Agenda BH 2026</a></li>
+            <li><a href="https://hsoftalmologicos.blogspot.com/" target="_blank">Blog Técnico</a></li>
+            <li><a href="https://wa.me/5519999648833" target="_blank">Suporte WhatsApp</a></li>
           </ul>
         </div>
       </div>
       <div class="footer-bottom">
-        <p>&copy; 2024 VisualCampo. Todos os direitos reservados.</p>
+        <p>&copy; 2026 VisualCampo. Todos os direitos reservados. | Especialista Daniel - Treinamento Interzeag Suíça</p>
       </div>
     </div>
   </footer>
