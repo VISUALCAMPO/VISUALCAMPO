@@ -306,6 +306,7 @@
 
   <main id="main-content">
     <!-- Hero Section -->
+        <!-- Hero Section -->
     <section class="hero">
       <div class="container">
         <div class="hero-grid">
@@ -323,13 +324,24 @@
               <span class="badge"><span class="badge-icon">📍</span> Base: Ribeirão Preto - SP</span>
             </div>
           </div>
-          <div class="hero-image animate delay-1" role="img" aria-label="Equipamento oftalmológico Octopus">
-            <div>
-              <div style="font-size: 3rem; margin-bottom: 1rem;">🔬</div>
-              <div style="font-size: 1.25rem;">Tecnologia e Precisão</div>
-              <div style="font-size: 0.9rem; opacity: 0.9; margin-top: 0.5rem;">Especialistas Octopus Interzeag / Haag-Streit</div>
+          
+          <!-- AQUI ENTRA O NOVO CÓDIGO DA IMAGEM -->
+          <div class="hero-image animate delay-1" style="position: relative; border-radius: var(--radius-lg); overflow: hidden; box-shadow: var(--shadow-lg); aspect-ratio: 4/3; background: linear-gradient(135deg, var(--color-primary) 0%, var(--color-accent) 100%);">
+            <img src=ESPECIALISTA1007.jpg alt="Daniel - Especialista VisualCampo" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: cover; object-position: center;">
+            <div style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: linear-gradient(135deg, rgba(13,59,102,0.75) 0%, rgba(42,157,143,0.65) 100%);"></div>
+            <div style="position: relative; z-index: 1; color: white; text-align: center; padding: 2rem; height: 100%; display: flex; flex-direction: column; justify-content: center; align-items: center;">
+              <div style="font-size: 4rem; margin-bottom: 1rem; filter: drop-shadow(0 2px 4px rgba(0,0,0,0.3));">🔬</div>
+              <div style="font-size: 1.75rem; font-weight: 700; margin-bottom: 0.75rem; text-shadow: 0 2px 4px rgba(0,0,0,0.3);">Tecnologia e Precisão</div>
+              <div style="font-size: 1.1rem; opacity: 0.95; max-width: 90%; text-shadow: 0 1px 2px rgba(0,0,0,0.3); line-height: 1.5;">
+                Especialista OCTOPUS<br>
+                <strong>Interzeag / Haag-Streit</strong>
+              </div>
+              <div style="margin-top: 1.5rem; background: rgba(255,255,255,0.2); backdrop-filter: blur(10px); padding: 0.5rem 1rem; border-radius: 50px; font-size: 0.85rem; font-weight: 600; border: 1px solid rgba(255,255,255,0.3);">
+                🇨🇭 Treinamento Oficial Suíça
+              </div>
             </div>
           </div>
+          
         </div>
       </div>
     </section>
