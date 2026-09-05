@@ -275,6 +275,41 @@
 </head>
 <body>
   
+  
+  <!-- Início do Banner de Localização -->
+<style>
+  .location-banner {
+    background: linear-gradient(90deg, #0056b3, #007bff);
+    color: #ffffff;
+    text-align: center;
+    padding: 12px 20px;
+    font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+    font-size: 1.1rem;
+    font-weight: 600;
+    position: sticky;
+    top: 0;
+    z-index: 9999;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.15);
+    letter-spacing: 0.5px;
+  }
+  .location-banner .city {
+    background-color: #ffffff;
+    color: #0056b3;
+    padding: 3px 10px;
+    border-radius: 6px;
+    margin-left: 6px;
+    font-weight: 800;
+    display: inline-block;
+  }
+</style>
+
+<div class="location-banner">
+  📍 Localização atual:<span class="city">Lagoa da Prata</span>
+</div>
+<!-- Fim do Banner de Localização -->
+
+  
+  
   <!-- Barra de Urgência -->
   <div class="top-bar">
     📢 AGENDA TÉCNICA BELO HORIZONTE E REGIÃO: A partir de 15 de Setembro de 2026. 
@@ -325,48 +360,8 @@
             </div>
           </div>
           
-          (function adicionarLocalizacao() {
-    if (!navigator.geolocation) {
-        return alert('Seu navegador não suporta geolocalização.');
-    }
-
-    navigator.geolocation.getCurrentPosition(
-        function (pos) {
-            const lat = pos.coords.latitude;
-            const lng = pos.coords.longitude;
-            console.log(`📍 Localização obtida: ${lat}, ${lng}`);
-
-            // Tenta encontrar o mapa (Leaflet)
-            let mapa = window.map || window._leaflet_map || window.Mapa || null;
-
-            if (!mapa && typeof L !== 'undefined') {
-                const container = document.querySelector('.leaflet-container');
-                if (container) {
-                    const id = container.id;
-                    if (id && window[id] instanceof L.Map) mapa = window[id];
-                }
-            }
-
-            if (mapa && typeof mapa.setView === 'function') {
-                // Adiciona marcador e centraliza o mapa
-                const marcador = L.marker([lat, lng], { title: 'Minha Localização' })
-                    .addTo(mapa)
-                    .bindPopup('<b>📍 Você está aqui</b>')
-                    .openPopup();
-                mapa.setView([lat, lng], 16);
-                alert('✅ Localização adicionada ao mapa com sucesso!');
-            } else {
-                // Fallback: abre no Google Maps caso não detecte o mapa
-                alert(`Mapa não detectado. Sua localização é:\n${lat}, ${lng}`);
-                window.open(`https://www.google.com/maps?q=${lat},${lng}`, '_blank');
-            }
-        },
-        function (err) {
-            alert('❌ Erro ao obter localização: ' + err.message);
-        },
-        { enableHighAccuracy: true }
-    );
-})();
+     
+    
           
           
           <!-- AQUI ENTRA O NOVO CÓDIGO DA IMAGEM -->
