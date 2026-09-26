@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VISUALCAMPO | Engenharia Biomédica & Cuidado Humanizado</title>
+    <meta name="description" content="Especialista em engenharia e manutenção de equipamentos médicos de diagnóstico. Conhecimento técnico avançado com a essência humanista do Raíces del Amor.">
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,700;1,400&family=Montserrat:wght@400;600;800&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --azul-profundo: #0A2540;
+            --ciano-tech: #00D4FF;
+            --ambar-acolhedor: #D4A373;
+            --verde-raices: #606C38;
+            --off-white: #F8F9FA;
+            --texto: #2D3748;
+        }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: 'Merriweather', serif; color: var(--texto); background-color: var(--off-white); line-height: 1.8; }
+        h1, h2, h3, .btn { font-family: 'Montserrat', sans-serif; }
+        
+        /* Header */
+        header { background: linear-gradient(135deg, var(--azul-profundo) 0%, #1a3a5c 100%); color: white; padding: 4rem 2rem; text-align: center; }
+        header h1 { font-size: 2.5rem; font-weight: 800; letter-spacing: 2px; margin-bottom: 1rem; }
+        header .subtitle { font-size: 1.1rem; font-weight: 300; opacity: 0.9; max-width: 700px; margin: 0 auto; }
+        header .badge { display: inline-block; background: var(--ambar-acolhedor); color: var(--azul-profundo); padding: 0.5rem 1.5rem; border-radius: 50px; font-weight: 600; font-size: 0.9rem; margin-top: 1.5rem; }
+
+        /* Raíces del Amor Support Banner */
+        .support-banner { background-color: var(--verde-raices); color: white; text-align: center; padding: 1rem 2rem; font-family: 'Montserrat', sans-serif; font-size: 0.95rem; }
+        .support-banner a { color: var(--ambar-acolhedor); text-decoration: none; font-weight: 600; }
+        .support-banner a:hover { text-decoration: underline; }
+
+        /* Main Content */
+        main { max-width: 900px; margin: 0 auto; padding: 3rem 2rem; }
+        section { margin-bottom: 4rem; background: white; padding: 2.5rem; border-radius: 12px; box-shadow: 0 4px 20px rgba(0,0,0,0.05); }
+        h2 { color: var(--azul-profundo); font-size: 1.8rem; margin-bottom: 1.5rem; border-left: 5px solid var(--ciano-tech); padding-left: 1rem; }
+        p { margin-bottom: 1.5rem; font-size: 1.05rem; }
+
+        /* Audio QR Section */
+        .audio-card { display: flex; flex-direction: column; align-items: center; background: var(--off-white); border: 2px dashed var(--ambar-acolhedor); border-radius: 12px; padding: 2rem; margin: 2rem 0; text-align: center; }
+        .audio-card img { width: 180px; height: 180px; margin-bottom: 1rem; border-radius: 8px; }
+        .audio-card h3 { color: var(--azul-profundo); margin-bottom: 0.5rem; }
+        .audio-card p { font-size: 0.95rem; color: #666; margin-bottom: 0; }
+
+        /* Footer */
+        footer { background: var(--azul-profundo); color: white; text-align: center; padding: 3rem 2rem; font-size: 0.9rem; }
+        footer a { color: var(--ciano-tech); text-decoration: none; }
+        
+        /* Responsive */
+        @media (max-width: 600px) {
+            header h1 { font-size: 1.8rem; }
+            section { padding: 1.5rem; }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>VISUALCAMPO</h1>
+        <p class="subtitle">Engenharia, Manutenção e Inovação em Equipamentos Médicos de Diagnóstico Computadorizado. Transformando dados técnicos em segurança e precisão para a vida.</p>
+        <div class="badge">Especialista Haag-Streit &bull; Belo Horizonte e Minas Gerais</div>
+    </header>
+
+    <div class="support-banner">
+        Com o apoio e a essência de <a href="https://www.instagram.com/raicesdelamor_rp/" target="_blank">Raíces del Amor Ribeirão Preto</a> &mdash; Cuidados Humanistas e Avançados 🌿
+    </div>
+
+    <main>
+        <section>
+            <h2>📘 O Ebook Interativo: Octopus 600</h2>
+            <p>Elaborei um material educacional avançado sobre a configuração completa de transferência de dados do Octopus 600. Mais do que um manual, é uma jornada de aprendizado profundo sobre Ethernet, USB, Banco de Dados Externo e a crítica conformidade com a norma <strong>EN 60601-1</strong>.</p>
+            <p>A tecnologia deve servir à vida com segurança. Por isso, este material foi desenhado para ser não apenas lido, mas <em>vivenciado</em>.</p>
+            
+            <div class="audio-card">
+                <!-- SUBSTITUA 'qr-code-audio.png' PELO NOME DO SEU ARQUIVO DE QR CODE -->
+                <img src="qr-code-audio.png" alt="QR Code para ouvir a introdução do VISUALCAMPO">
+                <h3>🎧 Ouça a Introdução do Autor</h3>
+                <p>Aponte a câmera do seu celular para o QR Code acima e ouça uma mensagem de voz exclusiva sobre a importância do isolamento galvânico na prática clínica.</p>
+            </div>
+
+            <p style="text-align: center; margin-top: 2rem;">
+                <em>"A engenharia biomédica não trata apenas de fazer a máquina funcionar; trata-se de garantir que ela nunca cause dano. É um pacto de proteção com a vida do paciente."</em>
+            </p>
+        </section>
+
+        <section>
+            <h2>🛠️ Serviços e Expertise</h2>
+            <ul style="list-style-type: none; padding-left: 0;">
+                <li style="margin-bottom: 1rem;">✅ <strong>Manutenção Especializada:</strong> Octopus Interzeag, Haag-Streit, Projetor de Estímulos e equipamentos Grings.</li>
+                <li style="margin-bottom: 1rem;">✅ <strong>Infraestrutura Clínica:</strong> Instalação de computadores, redes e reparos eletrônicos/elétricos em clínicas e hospitais.</li>
+                <li style="margin-bottom: 1rem;">✅ <strong>Consultoria em Conformidade:</strong> Adequação de equipamentos à norma EN 60601-1 e segurança elétrica.</li>
+            </ul>
+        </section>
+
+        <section>
+            <h2>🌿 Conexão Humanista</h2>
+            <p>Acredito que o conhecimento técnico só atinge sua plenitude quando está a serviço do bem-estar humano. Este projeto é realizado em sintonia com os valores do <strong>Espaço Raíces del Amor</strong>, promovendo uma abordagem que une a precisão da ciência à escuta sensível das necessidades reais de profissionais e pacientes.</p>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 VISUALCAMPO. Todos os direitos reservados.</p>
+        <p>Desenvolvido com propósito e tecnologia.</p>
+        <p style="margin-top: 1rem; font-size: 0.8rem; opacity: 0.7;">
+            Contato e Redes: <a href="https://www.instagram.com/raicesdelamor_rp/" target="_blank">@raicesdelamor_rp</a>
+        </p>
+    </footer>
+
+</body>
+</html>
