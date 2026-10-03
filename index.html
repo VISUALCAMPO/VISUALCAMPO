@@ -1,791 +1,219 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <meta name="description" content="Especialistas em manutenção, instalação e treinamento de Campo Visual Computadorizado (Octopus Interzeag/Haag-Streit). Base em Ribeirão Preto, atendimento em BH e todo o Brasil.">
-  <meta name="keywords" content="manutenção campo visual, Octopus Interzeag, Haag-Streit, equipamentos oftalmológicos, Ribeirão Preto, Belo Horizonte, manutenção preventiva, Daniel especialista Octopus">
-  <meta name="author" content="VisualCampo">
-  <meta name="robots" content="index, follow">
-  
-  <!-- Open Graph / Social -->
-  <meta property="og:title" content="VISUALCAMPO | Especialistas em Campo Visual Octopus">
-  <meta property="og:description" content="Manutenção, instalação e treinamentos com padrão internacional (Treinamento Suíça). Agenda especial BH a partir de Setembro/2026.">
-  <meta property="og:type" content="website">
-
-  <!-- Schema Markup -->
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": ["MedicalBusiness", "Organization"],
-    "name": "VisualCampo",
-    "description": "Manutenção especializada, instalação e treinamentos em Campo Visual Computadorizado (Octopus Interzeag/Haag-Streit) e equipamentos diagnósticos.",
-    "address": {
-      "@type": "PostalAddress",
-      "addressLocality": "Ribeirão Preto",
-      "addressRegion": "SP",
-      "postalCode": "14015-100",
-      "addressCountry": "BR"
-    },
-    "telephone": "+5519999648833",
-    "email": "visualcampo@outlook.com",
-    "areaServed": "Brasil e Exterior"
-  }
-  </script>
-
-  <title>VisualCampo | Especialistas em Campo Visual Octopus e Equipamentos Oftalmológicos</title>
-  
-  <!-- Google Fonts -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Manrope:wght@600;700;800&display=swap" rel="stylesheet">
-  
-  <style>
-    :root {
-      --color-primary: #0d3b66;
-      --color-primary-dark: #082847;
-      --color-secondary: #f4a261;
-      --color-accent: #2a9d8f;
-      --color-text: #1a1a2e;
-      --color-text-light: #6b7280;
-      --color-bg: #ffffff;
-      --color-bg-alt: #f8fafc;
-      --shadow-sm: 0 1px 2px rgba(0,0,0,0.05);
-      --shadow-md: 0 4px 12px rgba(0,0,0,0.08);
-      --shadow-lg: 0 10px 30px rgba(0,0,0,0.12);
-      --radius: 12px;
-      --radius-lg: 20px;
-      --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-      --container: 1200px;
-    }
-
-    * { margin: 0; padding: 0; box-sizing: border-box; }
-    html { scroll-behavior: smooth; }
-    body {
-      font-family: 'Inter', sans-serif;
-      color: var(--color-text);
-      line-height: 1.6;
-      background: var(--color-bg);
-      overflow-x: hidden;
-    }
-
-    .top-bar {
-      background: var(--color-secondary);
-      color: white;
-      text-align: center;
-      padding: 0.6rem 1rem;
-      font-weight: 600;
-      font-size: 0.9rem;
-      letter-spacing: 0.5px;
-    }
-    .top-bar a { color: white; text-decoration: underline; margin-left: 0.5rem; }
-
-    .container { max-width: var(--container); margin: 0 auto; padding: 0 1.5rem; }
-    .section { padding: 5rem 0; }
-    .section-title {
-      font-family: 'Manrope', sans-serif;
-      font-size: clamp(1.75rem, 4vw, 2.5rem);
-      font-weight: 700;
-      margin-bottom: 1rem;
-      color: var(--color-primary);
-    }
-    .section-subtitle {
-      font-size: 1.125rem;
-      color: var(--color-text-light);
-      max-width: 65ch;
-      margin-bottom: 3rem;
-    }
-    .btn {
-      display: inline-flex;
-      align-items: center;
-      gap: 0.5rem;
-      padding: 0.875rem 1.75rem;
-      background: var(--color-primary);
-      color: white;
-      border: none;
-      border-radius: 50px;
-      font-weight: 600;
-      text-decoration: none;
-      transition: var(--transition);
-      cursor: pointer;
-      box-shadow: var(--shadow-md);
-    }
-    .btn:hover { transform: translateY(-2px); box-shadow: var(--shadow-lg); background: var(--color-primary-dark); }
-    .btn-secondary { background: white; color: var(--color-primary); border: 2px solid var(--color-primary); }
-    .btn-secondary:hover { background: var(--color-primary); color: white; }
-    .btn-whatsapp { background: #25D366; color: white; }
-    .btn-whatsapp:hover { background: #128C7E; transform: translateY(-2px); }
-    .btn-email { background: var(--color-secondary); color: white; }
-    .btn-email:hover { background: #e89146; transform: translateY(-2px); }
-
-    .header {
-      position: sticky; top: 0; z-index: 1000;
-      background: rgba(255,255,255,0.95);
-      backdrop-filter: blur(10px);
-      border-bottom: 1px solid rgba(0,0,0,0.05);
-      transition: var(--transition);
-    }
-    .header.scrolled { box-shadow: var(--shadow-md); }
-    .nav { display: flex; justify-content: space-between; align-items: center; padding: 1rem 0; }
-    .logo {
-      font-family: 'Manrope', sans-serif; font-weight: 800; font-size: 1.5rem;
-      color: var(--color-primary); text-decoration: none; display: flex; align-items: center; gap: 0.5rem;
-    }
-    .logo-icon {
-      width: 32px; height: 32px; background: var(--color-accent); border-radius: 8px;
-      display: grid; place-items: center; color: white; font-weight: 700;
-    }
-    .nav-links { display: flex; gap: 2rem; list-style: none; }
-    .nav-links a { text-decoration: none; color: var(--color-text); font-weight: 500; transition: var(--transition); position: relative; }
-    .nav-links a:hover { color: var(--color-primary); }
-    .nav-links a::after { content: ''; position: absolute; bottom: -4px; left: 0; width: 0; height: 2px; background: var(--color-primary); transition: var(--transition); }
-    .nav-links a:hover::after { width: 100%; }
-    .nav-cta { display: flex; gap: 1rem; align-items: center; }
-    .mobile-toggle { display: none; font-size: 1.5rem; background: none; border: none; cursor: pointer; }
-
-    .hero {
-      padding: 4rem 0 5rem;
-      background: linear-gradient(135deg, var(--color-bg-alt) 0%, white 100%);
-      position: relative; overflow: hidden;
-    }
-    .hero::before {
-      content: ''; position: absolute; top: -50%; right: -20%; width: 60%; height: 120%;
-      background: radial-gradient(circle, rgba(42,157,143,0.08) 0%, transparent 70%); border-radius: 50%; z-index: 0;
-    }
-    .hero-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 3rem; align-items: center; position: relative; z-index: 1; }
-    .hero-content h1 {
-      font-family: 'Manrope', sans-serif; font-size: clamp(2rem, 5vw, 3.2rem);
-      font-weight: 800; line-height: 1.1; margin-bottom: 1rem; color: var(--color-primary);
-    }
-    .hero-highlight {
-      color: var(--color-accent);
-      display: block;
-      font-size: 0.6em;
-      font-weight: 600;
-      margin-bottom: 0.5rem;
-      text-transform: uppercase;
-      letter-spacing: 1px;
-    }
-    .hero-content p { font-size: 1.25rem; color: var(--color-text-light); margin-bottom: 2rem; max-width: 55ch; }
-    .hero-ctas { display: flex; gap: 1rem; flex-wrap: wrap; margin-bottom: 2.5rem; }
-    .hero-badges { display: flex; gap: 1rem; flex-wrap: wrap; }
-    .badge {
-      display: flex; align-items: center; gap: 0.5rem; padding: 0.5rem 1rem;
-      background: white; border-radius: 50px; box-shadow: var(--shadow-sm); font-size: 0.875rem; font-weight: 500;
-      border: 1px solid rgba(0,0,0,0.05);
-    }
-    .badge-icon {
-      width: 20px; height: 20px; background: var(--color-accent); border-radius: 50%;
-      display: grid; place-items: center; color: white; font-size: 0.75rem;
-    }
-    .hero-image {
-      position: relative; border-radius: var(--radius-lg); overflow: hidden; box-shadow: var(--shadow-lg);
-      aspect-ratio: 4/3; background: linear-gradient(135deg, var(--color-primary) 0%, var(--color-accent) 100%);
-      display: grid; place-items: center; color: white; font-weight: 600; text-align: center; padding: 2rem;
-    }
-
-    .services { background: var(--color-bg-alt); }
-    .services-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 1.5rem; }
-    .service-card {
-      background: white; padding: 2rem; border-radius: var(--radius); box-shadow: var(--shadow-sm);
-      transition: var(--transition); border: 1px solid transparent;
-    }
-    .service-card:hover { transform: translateY(-4px); box-shadow: var(--shadow-lg); border-color: rgba(42,157,143,0.3); }
-    .service-card.featured { border: 2px solid var(--color-secondary); position: relative; }
-    .service-card.featured::before {
-      content: '⭐ OPORTUNIDADE'; position: absolute; top: -12px; right: 20px;
-      background: var(--color-secondary); color: white; font-size: 0.75rem; font-weight: 700;
-      padding: 0.25rem 0.75rem; border-radius: 20px;
-    }
-    .service-icon {
-      width: 48px; height: 48px; background: linear-gradient(135deg, var(--color-primary), var(--color-accent));
-      border-radius: 12px; display: grid; place-items: center; color: white; font-size: 1.25rem; margin-bottom: 1rem;
-    }
-    .service-card h3 { font-size: 1.25rem; margin-bottom: 0.75rem; color: var(--color-primary); }
-    .service-card p { color: var(--color-text-light); margin-bottom: 1rem; font-size: 0.95rem; }
-    .service-link { color: var(--color-primary); text-decoration: none; font-weight: 500; display: inline-flex; align-items: center; gap: 0.25rem; transition: var(--transition); }
-    .service-link:hover { gap: 0.5rem; }
-
-    .coverage { background: white; text-align: center; }
-    .coverage-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 2rem; margin-top: 3rem; }
-    .coverage-item { padding: 2rem; border: 1px solid #eee; border-radius: var(--radius); transition: var(--transition); text-align: left; }
-    .coverage-item:hover { border-color: var(--color-accent); box-shadow: var(--shadow-md); }
-    .coverage-item.highlight { border-color: var(--color-primary); background: rgba(13, 59, 102, 0.03); }
-    .coverage-icon { font-size: 2.5rem; margin-bottom: 1rem; }
-
-    .blog-section { background: var(--color-bg-alt); text-align: center; }
-    
-    .cta-section {
-      background: linear-gradient(135deg, var(--color-primary) 0%, var(--color-primary-dark) 100%);
-      color: white; text-align: center; padding: 4rem 0;
-    }
-    .cta-section h2 { font-family: 'Manrope', sans-serif; font-size: clamp(1.75rem, 4vw, 2.5rem); margin-bottom: 1rem; }
-    .cta-section p { max-width: 60ch; margin: 0 auto 2rem; opacity: 0.9; font-size: 1.1rem; }
-    .cta-buttons { display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap; }
-
-    .footer { background: var(--color-text); color: white; padding: 4rem 0 2rem; }
-    .footer-grid { display: grid; grid-template-columns: 2fr 1fr 1fr; gap: 2rem; margin-bottom: 3rem; }
-    .footer-brand p { opacity: 0.8; margin: 1rem 0; max-width: 40ch; }
-    .footer-links h4 { margin-bottom: 1rem; font-size: 1.1rem; }
-    .footer-links ul { list-style: none; }
-    .footer-links li { margin-bottom: 0.5rem; }
-    .footer-links a { color: rgba(255,255,255,0.8); text-decoration: none; transition: var(--transition); display: block; }
-    .footer-links a:hover { color: var(--color-secondary); transform: translateX(4px); }
-    .footer-bottom { text-align: center; padding-top: 2rem; border-top: 1px solid rgba(255,255,255,0.1); font-size: 0.875rem; opacity: 0.7; }
-    .contact-info { display: flex; flex-direction: column; gap: 0.75rem; margin-top: 1rem; }
-    .contact-item { display: flex; align-items: center; gap: 0.75rem; font-size: 0.95rem; }
-    .contact-item a { color: white; text-decoration: none; }
-    .contact-item a:hover { color: var(--color-secondary); }
-
-    .whatsapp-float {
-      position: fixed; bottom: 1.5rem; right: 1.5rem; z-index: 999; background: #25D366; color: white;
-      width: 60px; height: 60px; border-radius: 50%; display: grid; place-items: center; font-size: 1.75rem;
-      box-shadow: var(--shadow-lg); text-decoration: none; transition: var(--transition); animation: pulse 2s infinite;
-    }
-    .whatsapp-float:hover { transform: scale(1.1); animation: none; }
-    @keyframes pulse {
-      0% { box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.7); }
-      70% { box-shadow: 0 0 0 15px rgba(37, 211, 102, 0); }
-      100% { box-shadow: 0 0 0 0 rgba(37, 211, 102, 0); }
-    }
-
-    @keyframes fadeInUp { from { opacity: 0; transform: translateY(30px); } to { opacity: 1; transform: translateY(0); } }
-    .animate { animation: fadeInUp 0.6s ease forwards; }
-    .delay-1 { animation-delay: 0.1s; }
-    .delay-2 { animation-delay: 0.2s; }
-
-    @media (max-width: 992px) {
-      .hero-grid, .footer-grid { grid-template-columns: 1fr; text-align: center; }
-      .hero-content p, .section-subtitle { margin-left: auto; margin-right: auto; }
-      .hero-ctas, .hero-badges { justify-content: center; }
-      .nav-links { display: none; }
-      .mobile-toggle { display: block; }
-      .nav.active .nav-links {
-        display: flex; flex-direction: column; position: absolute; top: 100%; left: 0; right: 0;
-        background: white; padding: 1rem; box-shadow: var(--shadow-md); gap: 1rem;
-      }
-      .coverage-item { text-align: center; }
-    }
-    @media (max-width: 480px) {
-      .section { padding: 3rem 0; }
-      .btn { width: 100%; justify-content: center; }
-      .hero-ctas { flex-direction: column; }
-    }
-  </style>
-</head>
-<body>
-  
-  
-  <!-- Início do Banner de Localização -->
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<meta name="theme-color" content="#0a0a09">
+<title>Pausa — Castelo Interior</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,600&display=swap" rel="stylesheet">
 <style>
-  .location-banner {
-    background: linear-gradient(90deg, #0056b3, #007bff);
-    color: #ffffff;
-    text-align: center;
-    padding: 12px 20px;
-    font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
-    font-size: 1.1rem;
-    font-weight: 600;
-    position: sticky;
-    top: 0;
-    z-index: 9999;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.15);
-    letter-spacing: 0.5px;
+  *{ margin:0; padding:0; box-sizing:border-box; }
+  html,body{ height:100%; }
+
+  body{
+    background:#0a0a09;
+    display:grid;
+    place-items:center;
+    overflow:hidden;
+    font-family:'Cormorant Garamond','EB Garamond',Georgia,'Times New Roman',serif;
   }
-  .location-banner .city {
-    background-color: #ffffff;
-    color: #0056b3;
-    padding: 3px 10px;
-    border-radius: 6px;
-    margin-left: 6px;
-    font-weight: 800;
-    display: inline-block;
+
+  /* ---------- ENQUADRAMENTO 9:16 ---------- */
+  .frame{
+    position:relative;
+    width:100vw;
+    height:100svh;
+    height:100dvh;
+    overflow:hidden;
+    isolation:isolate;
+    container-type:size;
+    background:
+      radial-gradient(125% 95% at 50% 44%,
+        #cdc5b2 0%,
+        #bcb4a1 34%,
+        #9a9384 66%,
+        #6f6a5f 100%);
+  }
+
+  /* Em telas largas (desktop), trava no formato celular em pé */
+  @media (min-aspect-ratio: 9/16){
+    .frame{
+      width:  min(100vw, calc(100dvh * 9 / 16));
+      height: min(100dvh, calc(100vw * 16 / 9));
+      border-radius:8px;
+      box-shadow:0 40px 110px rgba(0,0,0,.8);
+    }
+  }
+
+  /* ---------- CAMADAS DE FUNDO ---------- */
+  .bg{
+    position:absolute; inset:0; z-index:0;
+    pointer-events:none;
+  }
+  .bg svg{ width:100%; height:100%; display:block; }
+
+  .vignette{
+    position:absolute; inset:0; z-index:1; pointer-events:none;
+    background:
+      radial-gradient(118% 88% at 50% 45%,
+        rgba(18,16,12,0) 26%,
+        rgba(18,16,12,.26) 68%,
+        rgba(12,10,8,.62) 100%),
+      linear-gradient(180deg,
+        rgba(14,12,9,.34) 0%,
+        rgba(14,12,9,0) 20%,
+        rgba(14,12,9,0) 78%,
+        rgba(14,12,9,.38) 100%);
+  }
+
+  /* ---------- TEXTO ---------- */
+  .texto{
+    position:relative; z-index:2;
+    height:100%;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+    gap:.72em;
+    padding:5.5% 6%;
+    text-align:center;
+
+    color:#15120e;
+    font-weight:600;
+    line-height:1.38;
+    letter-spacing:.004em;
+    text-wrap:pretty;
+
+    /* fallback */
+    font-size:20px;
+    font-size:clamp(14px, min(6.6cqw, 3.3cqh), 34px);
+
+    text-shadow:
+      0 0 2px   rgba(252,248,236,.98),
+      0 0 9px   rgba(252,248,236,.92),
+      0 0 22px  rgba(250,244,226,.80),
+      0 0 46px  rgba(246,238,214,.55),
+      0 1px 0   rgba(255,253,245,.70);
+
+    -webkit-font-smoothing:antialiased;
+    -moz-osx-font-smoothing:grayscale;
+  }
+
+  .texto p{ margin:0; }
+
+  .abertura{
+    font-size:1.16em;
+    font-weight:700;
+    letter-spacing:.01em;
+  }
+
+  .destaque{
+    font-weight:700;
+    font-size:1.06em;
+  }
+
+  .texto em{
+    font-style:italic;
+    font-weight:600;
+  }
+
+  /* Telas muito baixas: respiro extra */
+  @media (max-height:680px){
+    .texto{ font-size:clamp(13px, min(6.2cqw, 3.15cqh), 30px); gap:.6em; }
+  }
+
+  /* ---------- IMPRESSÃO / PDF ---------- */
+  @media print{
+    @page{ size:9cm 16cm; margin:0; }
+    body{ background:#fff; }
+    .frame{
+      width:9cm; height:16cm;
+      border-radius:0; box-shadow:none;
+    }
+    *{ -webkit-print-color-adjust:exact; print-color-adjust:exact; }
   }
 </style>
+</head>
+<body>
 
-<div class="location-banner">
-  📍 Localização atual:<span class="city">Ribeirão Preto SP</span>
-</div>
-<!-- Fim do Banner de Localização -->
+<main class="frame">
 
-  
-  
-  <!-- Barra de Urgência -->
-  <div class="top-bar">
-    📢 AGENDA TÉCNICA BELO HORIZONTE E REGIÃO: A partir de 15 de Setembro de 2026. 
-    <a href="https://wa.me/5519999648833?text=Olá! Quero garantir minha vaga na agenda de BH em Setembro/2026.">Garanta sua visita →</a>
+  <!-- FUNDO: braço que abraça + halo de luz + Brasil em tom neutro -->
+  <div class="bg" aria-hidden="true">
+    <svg viewBox="0 0 500 900" preserveAspectRatio="xMidYMid slice">
+      <defs>
+        <filter id="blurArm" x="-40%" y="-40%" width="180%" height="180%">
+          <feGaussianBlur stdDeviation="26"/>
+        </filter>
+        <filter id="blurBr" x="-30%" y="-30%" width="160%" height="160%">
+          <feGaussianBlur stdDeviation="6"/>
+        </filter>
+
+        <radialGradient id="halo" cx="50%" cy="50%" r="50%">
+          <stop offset="0%"   stop-color="#fdf8e9" stop-opacity=".78"/>
+          <stop offset="52%"  stop-color="#f2e9d1" stop-opacity=".34"/>
+          <stop offset="100%" stop-color="#f2e9d1" stop-opacity="0"/>
+        </radialGradient>
+
+        <linearGradient id="brGrad" x1="0" y1="0" x2="0" y2="1">
+          <stop offset="0%"   stop-color="#5c6849" stop-opacity=".30"/>
+          <stop offset="100%" stop-color="#8b7b4d" stop-opacity=".17"/>
+        </linearGradient>
+      </defs>
+
+      <!-- Braço grandioso que envolve -->
+      <path d="M -150 830 C -85 130 585 130 650 830"
+            fill="none" stroke="#e8dab6" stroke-width="150"
+            stroke-linecap="round" opacity=".15"
+            filter="url(#blurArm)"/>
+
+      <!-- Brasil em tom neutro, desaturado -->
+      <g transform="translate(12 190) scale(0.95)"
+         filter="url(#blurBr)" opacity=".92">
+        <path d="M50 119 L175 68 L287 68 L375 94 L450 132 L487 145 L490 158
+                 L487 171 L462 209 L444 235 L437 273 L425 324 L400 350
+                 L362 375 L325 401 L275 478 L275 500 L205 455 L206 420
+                 L243 396 L246 375 L205 351 L200 318 L200 292 L175 273
+                 L175 260 L150 235 L112 209 L100 190 L50 190 L25 184
+                 L12 158 Z"
+              fill="url(#brGrad)"/>
+        <path d="M50 119 L175 68 L287 68 L375 94 L450 132 L487 145 L490 158
+                 L487 171 L462 209 L444 235 L437 273 L425 324 L400 350
+                 L362 375 L325 401 L275 478 L275 500 L205 455 L206 420
+                 L243 396 L246 375 L205 351 L200 318 L200 292 L175 273
+                 L175 260 L150 235 L112 209 L100 190 L50 190 L25 184
+                 L12 158 Z"
+              fill="none" stroke="#54523f" stroke-width="1.8" opacity=".22"/>
+      </g>
+
+      <!-- Halo de luz central -->
+      <ellipse cx="250" cy="452" rx="238" ry="368"
+               fill="url(#halo)" opacity=".62"/>
+    </svg>
   </div>
 
-  <header class="header" id="header">
-    <div class="container">
-      <nav class="nav">
-        <a href="/" class="logo">
-          <span class="logo-icon">VC</span>
-          VisualCampo
-        </a>
-        <button class="mobile-toggle" aria-label="Menu" id="mobileToggle">☰</button>
-        <ul class="nav-links" id="navLinks">
-          <li><a href="#servicos">Soluções</a></li>
-          <li><a href="#agenda">Agenda Regional</a></li>
-          <li><a href="#blog">Central Técnica</a></li>
-          <li><a href="#contato">Contato</a></li>
-        </ul>
-        <div class="nav-cta">
-          <a href="https://wa.me/5519999648833" class="btn btn-whatsapp" target="_blank" rel="noopener">
-            💬 WhatsApp
-          </a>
-        </div>
-      </nav>
-    </div>
-  </header>
+  <div class="vignette"></div>
 
-  <main id="main-content">
-    <!-- Hero Section -->
-        <!-- Hero Section -->
-    <section class="hero">
-      <div class="container">
-        <div class="hero-grid">
-          <div class="hero-content animate">
-            <span class="hero-highlight">Especialistas em Campo Visual Computadorizado</span>
-            <h1>Manutenção e Instalação <span style="color: var(--color-accent);">Octopus</span></h1>
-            <p>Soluções técnicas com padrão internacional. <strong>Especialista certificado e treinado diretamente na Interzeag / Haag-Streit (Suíça).</strong> Atendimento presencial e remoto para clínicas e hospitais.</p>
-            <div class="hero-ctas">
-              <a href="https://wa.me/5519999648833?text=Olá! Vim pelo site e gostaria de agendar uma visita técnica." class="btn btn-whatsapp" target="_blank" rel="noopener">💬 Agendar Visita Técnica</a>
-              <a href="#agenda" class="btn btn-secondary">📍 Ver Agenda BH 2026</a>
-            </div>
-            <div class="hero-badges">
-              <span class="badge"><span class="badge-icon">🇨🇭</span> Treinamento Suíça</span>
-              <span class="badge"><span class="badge-icon">✓</span> +20 anos de experiência</span>
-              <span class="badge"><span class="badge-icon">📍</span> Base: Ribeirão Preto - SP</span>
-            </div>
-          </div>
-          
-     
-    
-          
-          
-          <!-- AQUI ENTRA O NOVO CÓDIGO DA IMAGEM -->
-          <div class="hero-image animate delay-1" style="position: relative; border-radius: var(--radius-lg); overflow: hidden; box-shadow: var(--shadow-lg); aspect-ratio: 4/3; background: linear-gradient(135deg, var(--color-primary) 0%, var(--color-accent) 100%);">
-            <img src=ESPECIALISTA1007.jpg alt="Daniel - Especialista VisualCampo" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: cover; object-position: center;">
-            <div style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: linear-gradient(135deg, rgba(13,59,102,0.75) 0%, rgba(42,157,143,0.65) 100%);"></div>
-            <div style="position: relative; z-index: 1; color: white; text-align: center; padding: 2rem; height: 100%; display: flex; flex-direction: column; justify-content: center; align-items: center;">
-              <div style="font-size: 4rem; margin-bottom: 1rem; filter: drop-shadow(0 2px 4px rgba(0,0,0,0.3));">🔬</div>
-              <div style="font-size: 1.75rem; font-weight: 700; margin-bottom: 0.75rem; text-shadow: 0 2px 4px rgba(0,0,0,0.3);">Tecnologia e Precisão</div>
-              <div style="font-size: 1.1rem; opacity: 0.95; max-width: 90%; text-shadow: 0 1px 2px rgba(0,0,0,0.3); line-height: 1.5;">
-                Especialista OCTOPUS<br>
-                <strong>Interzeag / Haag-Streit</strong>
-              </div>
-              <div style="margin-top: 1.5rem; background: rgba(255,255,255,0.2); backdrop-filter: blur(10px); padding: 0.5rem 1rem; border-radius: 50px; font-size: 0.85rem; font-weight: 600; border: 1px solid rgba(255,255,255,0.3);">
-                🇨🇭 Treinamento Oficial Suíça
-              </div>
-            </div>
-          </div>
-          
-        </div>
-      </div>
-    </section>
+  <!-- TEXTO -->
+  <article class="texto">
+    <p class="abertura">Olá! 🌿</p>
 
-    <!-- Services Section -->
-    <section class="section services" id="servicos">
-      <div class="container">
-        <h2 class="section-title">Nossas Soluções</h2>
-        <p class="section-subtitle">Portfólio completo para garantir a eficiência, precisão diagnóstica e longevidade dos seus equipamentos.</p>
-        
-        <div class="services-grid">
-          <article class="service-card animate">
-            <div class="service-icon">🔧</div>
-            <h3>Manutenção Especializada</h3>
-            <p>Preventiva e corretiva de perímetros Octopus e equipamentos de diagnóstico, garantindo calibração de fábrica e evitando paradas no atendimento.</p>
-            <a href="https://wa.me/5519999648833?text=Olá! Gostaria de um orçamento de manutenção para Campo Visual." class="service-link" target="_blank">Solicitar orçamento →</a>
-          </article>
-          
-          <article class="service-card animate delay-1">
-            <div class="service-icon">🏥</div>
-            <h3>Instalação & Start-up</h3>
-            <p>Instalação completa, configuração de sistemas e validação de calibração. Inclui treinamento avançado de operação para sua equipe.</p>
-            <a href="https://wa.me/5519999648833?text=Olá! Preciso de instalação e start-up de equipamentos." class="service-link" target="_blank">Agendar instalação →</a>
-          </article>
-          
-          <article class="service-card featured animate delay-2">
-            <div class="service-icon" style="background: var(--color-secondary);">💎</div>
-            <h3>Pacote Preventivo Integrado</h3>
-            <p>Aproveite nossa agenda regional para revisar também seus <strong>Greens, Autorrefratores e Lâmpadas de Fenda</strong> com valor especial, economizando custos futuros de deslocamento.</p>
-            <a href="https://wa.me/5519999648833?text=Olá! Tenho interesse no Pacote Preventivo Integrado para minha clínica." class="service-link" target="_blank">Solicitar pacote especial →</a>
-          </article>
-          
-          <article class="service-card animate">
-            <div class="service-icon">📚</div>
-            <h3>Treinamentos</h3>
-            <p>Capacitação técnica para operadores e médicos. Maximizamos o uso dos equipamentos para um diagnóstico preciso e ágil.</p>
-            <a href="mailto:visualcampo@outlook.com?subject=Solicitação de Treinamento" class="service-link">Solicitar treinamento →</a>
-          </article>
-          
-          <article class="service-card animate delay-1">
-            <div class="service-icon">💻</div>
-            <h3>Suporte Remoto</h3>
-            <p>Atendimento técnico remoto para clínicas em todo o Brasil e exterior, resolvendo rapidamente questões de software e calibração.</p>
-            <a href="https://wa.me/5519999648833?text=Olá! Preciso de suporte remoto." class="service-link" target="_blank">Acionar suporte →</a>
-          </article>
-          
-          <article class="service-card animate delay-2">
-            <div class="service-icon">📦</div>
-            <h3>Vendas e Assessoria</h3>
-            <p>Comercialização de equipamentos, insumos e consultoria para escolha estratégica de tecnologia e otimização de fluxo clínico.</p>
-            <a href="https://wa.me/5519999648833?text=Olá! Tenho interesse em vendas e assessoria." class="service-link" target="_blank">Falar com especialista →</a>
-          </article>
-        </div>
-      </div>
-    </section>
+    <p>Percebo a tensão coletiva nestas vésperas. Sem julgar, convido você a uma pausa.</p>
 
+    <p class="destaque">Jesus nos legou a paz ✨</p>
 
+    <p>Santa Teresa, o <em>“Castelo Interior”</em> inabalável.</p>
 
-        <!-- Testimonials Section -->
-    <section class="section testimonials" style="background: var(--color-bg-alt);">
-      <div class="container">
-        <h2 class="section-title" style="text-align: center;">O Que Nossos Clientes Dizem</h2>
-        <p class="section-subtitle" style="text-align: center; margin-left: auto; margin-right: auto;">
-          A satisfação de quem confia na VisualCampo é nosso maior prêmio.
-        </p>
-        
-        <div class="testimonials-grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 2rem; margin-top: 3rem;">
-          
-          <!-- Depoimento 1: Teófilo Otoni -->
-          <div class="testimonial-card animate" style="background: white; padding: 2rem; border-radius: var(--radius); box-shadow: var(--shadow-md); text-align: center; border-top: 4px solid var(--color-secondary);">
-            <div style="font-size: 2.5rem; margin-bottom: 1rem;">⭐⭐⭐⭐⭐</div>
-            <blockquote style="font-size: 1.15rem; color: var(--color-text); font-style: italic; margin-bottom: 1.5rem; line-height: 1.6;">
-              "Parabéns pela rapidez e profissionalismo. Você brilhou!"
-            </blockquote>
-            <div style="display: flex; align-items: center; gap: 1rem; justify-content: center; margin-bottom: 1.5rem;">
-              <div style="width: 50px; height: 50px; background: var(--color-primary); border-radius: 50%; display: grid; place-items: center; color: white; font-weight: 700; font-size: 1.1rem;">
-                MG
-              </div>
-              <div style="text-align: left;">
-                <div style="font-weight: 600; color: var(--color-primary);">Cliente Satisfeito</div>
-                <div style="font-size: 0.875rem; color: var(--color-text-light);">Teófilo Otoni, MG</div>
-              </div>
-            </div>
-            <!-- IMAGEM DO DEPOIMENTO (Tamanho Controlado) -->
-            <div style="margin-top: 1rem; padding-top: 1rem; border-top: 1px solid #eee;">
-              <img src=depoimento1.jpg alt="Depoimento de cliente" style="max-width: 280px; width: 100%; border-radius: 8px; box-shadow: var(--shadow-sm);">
-            </div>
-          </div>
+    <p>Mais tarde, enviarei um convite para unirmos orações, Reiki e meditação pelo Brasil, tecendo um escudo de luz 🕊️</p>
 
-          <!-- Depoimento 2: Oftalmocentro Uberaba -->
-          <div class="testimonial-card animate delay-1" style="background: white; padding: 2rem; border-radius: var(--radius); box-shadow: var(--shadow-md); text-align: center; border-top: 4px solid var(--color-accent);">
-            <div style="font-size: 2.5rem; margin-bottom: 1rem;">⭐⭐⭐⭐⭐</div>
-            <blockquote style="font-size: 1.15rem; color: var(--color-text); font-style: italic; margin-bottom: 1.5rem; line-height: 1.6;">
-              "Muito obrigada Daniel, você tem sido ótimo!"
-            </blockquote>
-            <div style="display: flex; align-items: center; gap: 1rem; justify-content: center;">
-              <div style="width: 50px; height: 50px; background: var(--color-accent); border-radius: 50%; display: grid; place-items: center; color: white; font-weight: 700; font-size: 1.1rem;">
-                MA
-              </div>
-              <div style="text-align: left;">
-                <div style="font-weight: 600; color: var(--color-primary);">M.A.</div>
-                <div style="font-size: 0.875rem; color: var(--color-text-light);">Oftalmocentro - Uberaba, MG</div>
-              </div>
-            </div>
-            <div style="margin-top: 1.5rem; padding: 1rem; background: rgba(42,157,143,0.05); border-radius: 8px; border-left: 3px solid var(--color-accent);">
-              <p style="font-size: 0.9rem; color: var(--color-text-light); margin: 0; text-align: left;">
-                <strong style="color: var(--color-accent);">Contexto:</strong> Após orientações de alternativas para manter o equipamento em uso até a efetiva manutenção corretiva.
-              </p>
-            </div>
-          </div>
-          
-        </div>
-      </div>
-    </section>
+    <p>Por ora, respire, recolha-se em seu castelo e lembre-se: só o amor sustenta.</p>
 
-    
-    <!-- Regional Agenda Section -->
-       <!-- Coverage & Authority Section -->
-    <section class="section coverage" id="cobertura" style="background: linear-gradient(135deg, #f8fafc 0%, #ffffff 100%); position: relative; overflow: hidden;">
-      <!-- Elemento decorativo de fundo -->
-      <div style="position: absolute; top: -100px; right: -100px; width: 400px; height: 400px; background: radial-gradient(circle, rgba(42,157,143,0.05) 0%, transparent 70%); border-radius: 50%;"></div>
-      
-      <div class="container" style="position: relative; z-index: 1;">
-        <!-- Header com Autoridade -->
-        <div style="text-align: center; margin-bottom: 3rem;">
-          <div style="display: inline-flex; align-items: center; gap: 0.5rem; background: var(--color-primary); color: white; padding: 0.5rem 1.5rem; border-radius: 50px; font-weight: 600; font-size: 0.9rem; margin-bottom: 1rem; box-shadow: var(--shadow-md);">
-            <span style="font-size: 1.2rem;">🏆</span>
-            <span>+25 ANOS DE EXPERIÊNCIA</span>
-          </div>
-          <h2 class="section-title" style="font-size: clamp(2rem, 5vw, 2.8rem); margin-bottom: 1rem;">
-            Excelência Técnica que <span style="color: var(--color-accent);">Atravessa Fronteiras</span>
-          </h2>
-          <p class="section-subtitle" style="max-width: 70ch; margin: 0 auto 1rem auto; font-size: 1.15rem;">
-            Da nossa sede em <strong>Ribeirão Preto - SP</strong>, levamos soluções técnicas especializadas para clínicas e hospitais em todo o Brasil e exterior.
-          </p>
-          <p style="color: var(--color-text-light); font-size: 1rem; max-width: 65ch; margin: 0 auto;">
-            Atendimento presencial e remoto com a mesma qualidade, seriedade e compromisso que construíram nossa reputação ao longo de mais de duas décadas.
-          </p>
-        </div>
+    <p class="abertura">Até já! 🤍</p>
+  </article>
 
-        <!-- Cards de Cobertura -->
-        <div class="coverage-grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2rem; margin-top: 3rem;">
-          
-          <!-- Card 1: Belo Horizonte (DESTAQUE ESPECIAL) -->
-          <div class="coverage-item animate" style="background: white; padding: 2.5rem; border-radius: var(--radius-lg); box-shadow: var(--shadow-lg); border: 3px solid var(--color-secondary); position: relative; overflow: hidden; transform: scale(1.02);">
-            <!-- Badge de destaque -->
-            <div style="position: absolute; top: 0; right: 0; background: var(--color-secondary); color: white; padding: 0.5rem 1rem; font-size: 0.75rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.5px; border-bottom-left-radius: 12px;">
-              📢 AGENDA ESPECIAL
-            </div>
-            
-            <div style="font-size: 3.5rem; margin-bottom: 1.5rem; line-height: 1;">📍</div>
-            <h3 style="font-family: 'Manrope', sans-serif; font-size: 1.5rem; font-weight: 700; color: var(--color-primary); margin-bottom: 1rem;">
-              Belo Horizonte e Região
-            </h3>
-            <div style="background: rgba(244,162,97,0.1); padding: 1rem; border-radius: 8px; margin-bottom: 1rem; border-left: 4px solid var(--color-secondary);">
-              <p style="font-weight: 700; color: var(--color-primary); margin: 0; font-size: 1.05rem;">
-                🗓️ A partir de 15/09/2026
-              </p>
-            </div>
-            <p style="color: var(--color-text-light); line-height: 1.7; margin-bottom: 1.5rem;">
-              Visita técnica presencial com <strong>condição especial de logística</strong>. Envie sua localização e lista de equipamentos para receber um pacote completo com valor otimizado.
-            </p>
-            <a href="https://wa.me/5519999648833?text=Olá! Minha clínica é em BH/região e quero calcular a logística para Setembro/2026." class="btn btn-secondary" style="width: 100%; justify-content: center; font-weight: 600;" target="_blank" rel="noopener">
-              🎯 Calcular minha logística
-            </a>
-          </div>
+</main>
 
-          <!-- Card 2: Brasil e Exterior -->
-          <div class="coverage-item animate delay-1" style="background: white; padding: 2.5rem; border-radius: var(--radius-lg); box-shadow: var(--shadow-md); border: 2px solid transparent; transition: var(--transition);">
-            <div style="width: 70px; height: 70px; background: linear-gradient(135deg, var(--color-primary), var(--color-accent)); border-radius: 16px; display: grid; place-items: center; color: white; font-size: 2.5rem; margin-bottom: 1.5rem; box-shadow: var(--shadow-md);">
-              🌎
-            </div>
-            <h3 style="font-family: 'Manrope', sans-serif; font-size: 1.4rem; font-weight: 700; color: var(--color-primary); margin-bottom: 1rem;">
-              Brasil e Exterior
-            </h3>
-            <p style="color: var(--color-text-light); line-height: 1.7; margin-bottom: 1.5rem;">
-              Atendemos clínicas e hospitais em <strong>todas as regiões do Brasil</strong> e em diversos países, com deslocamento de técnicos especializados para intervenções complexas e instalações in loco.
-            </p>
-            <div style="display: flex; flex-wrap: wrap; gap: 0.5rem; margin-bottom: 1.5rem;">
-              <span style="background: rgba(13,59,102,0.1); color: var(--color-primary); padding: 0.4rem 0.8rem; border-radius: 20px; font-size: 0.8rem; font-weight: 600;">🇧🇷 Todo Brasil</span>
-              <span style="background: rgba(42,157,143,0.1); color: var(--color-accent); padding: 0.4rem 0.8rem; border-radius: 20px; font-size: 0.8rem; font-weight: 600;"> Internacional</span>
-            </div>
-            <a href="https://wa.me/5519999648833?text=Olá! Tenho interesse em atendimento presencial." class="service-link" style="font-size: 1rem; font-weight: 600;" target="_blank" rel="noopener">
-              Solicitar visita técnica →
-            </a>
-          </div>
-
-          <!-- Card 3: Atendimento Remoto -->
-          <div class="coverage-item animate delay-2" style="background: white; padding: 2.5rem; border-radius: var(--radius-lg); box-shadow: var(--shadow-md); border: 2px solid transparent; transition: var(--transition);">
-            <div style="width: 70px; height: 70px; background: linear-gradient(135deg, #25D366, var(--color-accent)); border-radius: 16px; display: grid; place-items: center; color: white; font-size: 2.5rem; margin-bottom: 1.5rem; box-shadow: var(--shadow-md);">
-              💻
-            </div>
-            <h3 style="font-family: 'Manrope', sans-serif; font-size: 1.4rem; font-weight: 700; color: var(--color-primary); margin-bottom: 1rem;">
-              Atendimento Remoto
-            </h3>
-            <p style="color: var(--color-text-light); line-height: 1.7; margin-bottom: 1.5rem;">
-              Suporte rápido e eficiente via internet, resolvendo a maioria das ocorrências de software e calibração <strong>sem custo de deslocamento</strong>. Tecnologia a favor da sua clínica.
-            </p>
-            <div style="background: rgba(37,211,102,0.1); padding: 1rem; border-radius: 8px; margin-bottom: 1.5rem;">
-              <p style="color: var(--color-text); font-size: 0.95rem; margin: 0; font-weight: 600;">
-                ✓ Resolução em até 24h<br>
-                ✓ Zero custo de deslocamento<br>
-                ✓ Mesma qualidade do presencial
-              </p>
-            </div>
-            <a href="https://wa.me/5519999648833?text=Olá! Preciso de suporte remoto urgente." class="btn btn-whatsapp" style="width: 100%; justify-content: center; font-weight: 600;" target="_blank" rel="noopener">
-              💬 Acionar suporte remoto
-            </a>
-          </div>
-        </div>
-
-        <!-- Seção de Credibilidade -->
-        <div style="margin-top: 4rem; background: white; padding: 2.5rem; border-radius: var(--radius-lg); box-shadow: var(--shadow-md); border-left: 5px solid var(--color-primary);">
-          <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 2rem; align-items: center;">
-            <div>
-              <h3 style="font-family: 'Manrope', sans-serif; font-size: 1.3rem; font-weight: 700; color: var(--color-primary); margin-bottom: 1rem;">
-                🏢 Sede Operacional
-              </h3>
-              <p style="color: var(--color-text-light); line-height: 1.7; margin: 0;">
-                <strong>Ribeirão Preto - SP</strong><br>
-                CEP 14015-100<br>
-                Base estratégica para atendimento em todo o território nacional e internacional.
-              </p>
-            </div>
-            <div style="display: flex; flex-direction: column; gap: 1rem;">
-              <div style="display: flex; align-items: center; gap: 1rem; padding: 1rem; background: rgba(13,59,102,0.05); border-radius: 8px;">
-                <div style="font-size: 2rem;">🎓</div>
-                <div>
-                  <div style="font-weight: 700; color: var(--color-primary);">Especialização Internacional</div>
-                  <div style="font-size: 0.9rem; color: var(--color-text-light);">Treinamento oficial Interzeag/Haag-Streit (Suíça)</div>
-                </div>
-              </div>
-              <div style="display: flex; align-items: center; gap: 1rem; padding: 1rem; background: rgba(42,157,143,0.05); border-radius: 8px;">
-                <div style="font-size: 2rem;">🛡️</div>
-                <div>
-                  <div style="font-weight: 700; color: var(--color-primary);">Garantia e Segurança</div>
-                  <div style="font-size: 0.9rem; color: var(--color-text-light);">90 dias de garantia em todos os serviços</div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-        <!-- Blog Integration Section -->
-    <section class="section blog-section" id="blog">
-      <div class="container">
-        <h2 class="section-title">Nossa Rede de Conhecimento Técnico</h2>
-        <p class="section-subtitle" style="margin: 0 auto 2.5rem auto;">
-          Acesse nossos canais oficiais com histórico de serviços, artigos técnicos e a expertise de quem é treinado na Interzeag (Suíça). 
-          Informação de qualidade para manter a saúde do seu parque tecnológico.
-        </p>
-        
-        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2rem; margin-top: 2rem;">
-          
-          <!-- Card Blog 1 -->
-          <div style="background: white; padding: 2rem; border-radius: var(--radius); box-shadow: var(--shadow-md); border-top: 4px solid var(--color-accent);">
-            <h3 style="color: var(--color-primary); margin-bottom: 0.5rem; font-family: 'Manrope', sans-serif;">📡 Central de Suporte & Histórico</h3>
-            <p style="color: var(--color-text-light); margin-bottom: 1.5rem; font-size: 0.95rem;">
-              Base técnica mantida pelo especialista Daniel. Foco em soluções diretas, contato de suporte e histórico de manutenção em Campo Visual Octopus.
-            </p>
-            <a href="https://hsoftalmologicos.blogspot.com/" target="_blank" rel="noopener" class="btn btn-secondary" style="width: 100%; justify-content: center; padding: 0.75rem 1rem;">
-              Acessar Blog Técnico →
-            </a>
-          </div>
-
-          <!-- Card Blog 2 (NOVO) -->
-          <div style="background: white; padding: 2rem; border-radius: var(--radius); box-shadow: var(--shadow-md); border-top: 4px solid var(--color-secondary);">
-            <h3 style="color: var(--color-primary); margin-bottom: 0.5rem; font-family: 'Manrope', sans-serif;">🇧🇷 VisualCampo Brasil Institucional</h3>
-            <p style="color: var(--color-text-light); margin-bottom: 1.5rem; font-size: 0.95rem;">
-              Nosso canal de artigos, novidades do setor oftalmológico, dicas de preservação de equipamentos e atualizações da nossa agenda nacional.
-            </p>
-            <a href="https://visualcampobrasil.blogspot.com/" target="_blank" rel="noopener" class="btn btn-secondary" style="width: 100%; justify-content: center; padding: 0.75rem 1rem; background: var(--color-secondary); border-color: var(--color-secondary); color: white;">
-              Visitar Canal Brasil →
-            </a>
-          </div>
-
-        </div>
-      </div>
-    </section>
-
-    <!-- CTA Section -->
-    <section class="cta-section" id="contato">
-      <div class="container">
-        <h2>Pronto para otimizar sua clínica?</h2>
-        <p>Entre em contato agora mesmo para orçamentos, visitas técnicas ou tirar dúvidas. Estamos prontos para atender você com a excelência que seu equipamento exige.</p>
-        <div class="cta-buttons">
-          <a href="https://wa.me/5519999648833?text=Olá! Gostaria de atendimento." class="btn btn-whatsapp" target="_blank" rel="noopener">
-            💬 Chamar no WhatsApp
-          </a>
-          <a href="mailto:visualcampo@outlook.com" class="btn btn-email">
-            ✉️ visualcampo@outlook.com
-          </a>
-        </div>
-      </div>
-    </section>
-  </main>
-
-  <!-- Footer -->
-
-  
-  
-  <footer class="footer">
-    <div class="container">
-      <div class="footer-grid">
-        <div class="footer-brand">
-          <a href="/" class="logo" style="color: white; margin-bottom: 1rem; display: inline-flex; align-items: center; gap: 0.5rem;">
-            <span class="logo-icon">VC</span>
-            VisualCampo
-          </a>
-          <p>Excelência em manutenção, instalação e treinamentos de Campo Visual Computadorizado e equipamentos diagnósticos oftalmológicos.</p>
-          <div class="contact-info">
-            <div class="contact-item">📱 <a href="https://wa.me/5519999648833" target="_blank">WhatsApp: (19) 99964-8833</a></div>
-            <div class="contact-item">📧 <a href="mailto:visualcampo@outlook.com">visualcampo@outlook.com</a></div>
-            <div class="contact-item">📍 Base Operacional: Ribeirão Preto, SP – CEP 14015-100</div>
-          </div>
-        </div>
-
-        <div class="footer-links">
-          <h4>Recursos</h4>
-          <ul>
-            <li><a href="#agenda">Agenda BH 2026</a></li>
-            <li><a href="https://hsoftalmologicos.blogspot.com/" target="_blank">Blog de Suporte Técnico</a></li>
-            <li><a href="https://visualcampobrasil.blogspot.com/" target="_blank">Canal VisualCampo Brasil</a></li>
-            <li><a href="https://wa.me/5519999648833" target="_blank">Suporte WhatsApp</a></li>
-          </ul>
-        </div>
-        
-        <div class="footer-links">
-          <h4>Soluções</h4>
-          <ul>
-            <li><a href="#servicos">Manutenção Octopus</a></li>
-            <li><a href="#servicos">Pacote Preventivo</a></li>
-            <li><a href="#servicos">Instalação</a></li>
-            <li><a href="#servicos">Treinamentos</a></li>
-          </ul>
-        </div>
-        <div class="footer-links">
-          <h4>Recursos</h4>
-          <ul>
-            <li><a href="#agenda">Agenda BH 2026</a></li>
-            <li><a href="https://hsoftalmologicos.blogspot.com/" target="_blank">Blog Técnico</a></li>
-            <li><a href="https://wa.me/5519999648833" target="_blank">Suporte WhatsApp</a></li>
-          </ul>
-        </div>
-      </div>
-      <div class="footer-bottom">
-        <p>&copy; 2026 VisualCampo. Todos os direitos reservados. | Especialista Daniel - Treinamento Interzeag Suíça</p>
-      </div>
-    </div>
-  </footer>
-
-  <!-- Floating WhatsApp Button -->
-  <a href="https://wa.me/5519999648833?text=Olá! Vim pelo site da VisualCampo." class="whatsapp-float" target="_blank" rel="noopener" aria-label="Falar no WhatsApp">
-    💬
-  </a>
-
-  <script>
-    const header = document.getElementById('header');
-    window.addEventListener('scroll', () => {
-      if (window.scrollY > 50) header.classList.add('scrolled');
-      else header.classList.remove('scrolled');
-    });
-
-    const mobileToggle = document.getElementById('mobileToggle');
-    const nav = document.querySelector('.nav');
-    mobileToggle.addEventListener('click', () => {
-      nav.classList.toggle('active');
-      mobileToggle.textContent = nav.classList.contains('active') ? '✕' : '☰';
-    });
-
-    document.querySelectorAll('.nav-links a').forEach(link => {
-      link.addEventListener('click', () => {
-        nav.classList.remove('active');
-        mobileToggle.textContent = '☰';
-      });
-    });
-
-    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-      anchor.addEventListener('click', function(e) {
-        const target = document.querySelector(this.getAttribute('href'));
-        if (target) {
-          e.preventDefault();
-          target.scrollIntoView({ behavior: 'smooth', block: 'start' });
-        }
-      });
-    });
-
-    const observer = new IntersectionObserver((entries) => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          entry.target.style.opacity = '1';
-          entry.target.style.transform = 'translateY(0)';
-          observer.unobserve(entry.target);
-        }
-      });
-    }, { threshold: 0.1 });
-
-    document.querySelectorAll('.animate').forEach(el => {
-      el.style.opacity = '0';
-      el.style.transform = 'translateY(20px)';
-      el.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
-      observer.observe(el);
-    });
-  </script>
 </body>
 </html>
