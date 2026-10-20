@@ -60,6 +60,16 @@
       overflow-x: hidden;
     }
 
+    /* ===== BLINKING — FAIXA DE ALERTA ===== */
+    @keyframes blinkSlow {
+      0%, 100% { opacity: 1; }
+      50%       { opacity: 0.35; }
+    }
+
+    .blink-slow {
+      animation: blinkSlow 2.4s ease-in-out infinite;
+    }
+
     /* ===== FAIXA DE ALERTA — VIAGEM RJ ===== */
     .alert-banner {
       background: linear-gradient(90deg, var(--laranja-alerta) 0%, #ff4500 100%);
@@ -116,6 +126,18 @@
       align-items: center;
       gap: 14px;
       text-decoration: none;
+    }
+
+    .nav-brand-logo {
+      height: 52px;
+      width: auto;
+      object-fit: contain;
+      filter: brightness(0) invert(1);  /* torna branco sobre fundo escuro */
+      transition: var(--transition);
+    }
+
+    .nav-brand:hover .nav-brand-logo {
+      filter: brightness(0) invert(1) drop-shadow(0 0 6px rgba(33,150,243,0.7));
     }
 
     .nav-logo-text {
@@ -206,6 +228,17 @@
       position: relative;
       z-index: 2;
       max-width: 680px;
+    }
+
+    .hero-logo {
+      display: block;
+      height: clamp(70px, 10vw, 110px);
+      width: auto;
+      object-fit: contain;
+      filter: brightness(0) invert(1);
+      margin-bottom: 28px;
+      opacity: 0.95;
+      drop-shadow: 0 4px 20px rgba(33,150,243,0.5);
     }
 
     .hero-badge {
@@ -845,8 +878,8 @@
 
   <!-- ===== FAIXA DE ALERTA: VIAGEM RJ ===== -->
   <div class="alert-banner">
-    <i class="fas fa-map-marker-alt"></i>
-    <span>🗺️ PRÓXIMA VISITA: <strong>Teresópolis &amp; Sto. Antônio de Pádua – RJ</strong> · Vagas limitadas!</span>
+    <i class="fas fa-map-marker-alt blink-slow"></i>
+    <span class="blink-slow">🗺️ PRÓXIMA VISITA: <strong>Teresópolis &amp; Sto. Antônio de Pádua – RJ</strong> · Vagas limitadas!</span>
     <a href="https://wa.me/5519999548833?text=Olá%2C+Daniel!+Vi+que+você+estará+na+região+do+RJ+e+gostaria+de+agendar+um+atendimento+técnico." target="_blank" rel="noopener">
       📅 Agendar agora
     </a>
@@ -855,6 +888,7 @@
   <!-- ===== NAVBAR ===== -->
   <nav>
     <a class="nav-brand" href="#">
+      <img class="nav-brand-logo" src="logo-visualcampo.jpg" alt="VISUALCAMPO — Treinamento e Serviços" />
       <div>
         <span class="nav-logo-text">VISUAL<span>CAMPO</span></span>
         <span class="nav-sub">Serviços de Engenharia Clínica</span>
@@ -879,6 +913,7 @@
       <i class="fas fa-eye"></i>
     </div>
     <div class="hero-content">
+      <img class="hero-logo" src="logo-visualcampo.jpg" alt="VISUALCAMPO Treinamento e Serviços" />
       <div class="hero-badge">
         <i class="fas fa-certificate"></i>
         Especialista Haag-Streit · Octopus · Zeiss
