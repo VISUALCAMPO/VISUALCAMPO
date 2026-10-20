@@ -1,0 +1,2457 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="VISUALCAMPO — Serviços de Engenharia Clínica Oftalmológica. Especialistas em Perímetros Octopus (Haag-Streit). Ribeirão Preto–SP. Atendimento em todo o Brasil." />
+  <meta name="keywords" content="engenharia clínica, oftalmologia, perimetro octopus, haag-streit, manutenção equipamentos, calibração, ribeirão preto, teresópolis, santo antonio de padua" />
+  <meta property="og:title" content="VISUALCAMPO — Serviços de Engenharia Clínica Oftalmológica" />
+  <meta property="og:description" content="Especialista em perímetros Octopus e equipamentos de diagnóstico oftalmológico. Ribeirão Preto–SP." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://www.visualcampo.com.br" />
+
+  <title>VISUALCAMPO — Serviços de Engenharia Clínica Oftalmológica</title>
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700;900&family=Open+Sans:wght@300;400;600&display=swap" rel="stylesheet" />
+
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+
+  <style>
+    /* ===== VARIÁVEIS E RESET ===== */
+    :root {
+      --azul-escuro: #0a1f3c;
+      --azul-medio: #1a3a6b;
+      --azul-claro: #1e6ab4;
+      --azul-acento: #2196F3;
+      --verde-wa: #25D366;
+      --verde-wa-dark: #128C7E;
+      --cinza-claro: #f5f7fa;
+      --cinza-medio: #8e9aaf;
+      --branco: #ffffff;
+      --texto: #1a1a2e;
+      --texto-claro: #4a5568;
+      --dourado: #c9a227;
+      --laranja-alerta: #ff6b35;
+      --font-title: 'Montserrat', sans-serif;
+      --font-body: 'Open Sans', sans-serif;
+      --shadow: 0 4px 24px rgba(10, 31, 60, 0.12);
+      --shadow-lg: 0 8px 40px rgba(10, 31, 60, 0.20);
+      --radius: 12px;
+      --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+
+    *, *::before, *::after {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      font-family: var(--font-body);
+      color: var(--texto);
+      background: var(--branco);
+      line-height: 1.7;
+      overflow-x: hidden;
+    }
+
+    /* ===== BLINKING — FAIXA DE ALERTA ===== */
+    @keyframes blinkSlow {
+      0%, 100% { opacity: 1; }
+      50%       { opacity: 0.35; }
+    }
+
+    .blink-slow {
+      animation: blinkSlow 2.4s ease-in-out infinite;
+    }
+
+    /* ===== FAIXA DE ALERTA — VIAGEM RJ ===== */
+    .alert-banner {
+      background: linear-gradient(90deg, var(--laranja-alerta) 0%, #ff4500 100%);
+      color: white;
+      text-align: center;
+      padding: 10px 20px;
+      font-family: var(--font-title);
+      font-size: 0.88rem;
+      font-weight: 600;
+      letter-spacing: 0.02em;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 12px;
+      flex-wrap: wrap;
+    }
+
+    .alert-banner a {
+      color: white;
+      background: rgba(255,255,255,0.2);
+      padding: 4px 14px;
+      border-radius: 20px;
+      text-decoration: none;
+      font-weight: 700;
+      border: 1px solid rgba(255,255,255,0.5);
+      transition: var(--transition);
+      white-space: nowrap;
+    }
+
+    .alert-banner a:hover {
+      background: white;
+      color: var(--laranja-alerta);
+    }
+
+    /* ===== NAVBAR ===== */
+    nav {
+      background: var(--azul-escuro);
+      padding: 0 5%;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      min-height: 68px;
+      position: sticky;
+      top: 40px;
+      z-index: 999;
+      box-shadow: var(--shadow);
+    }
+
+    .nav-brand {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      text-decoration: none;
+    }
+
+    /* Pill branco que envolve o logo no navbar */
+    .nav-logo-pill {
+      display: flex;
+      align-items: center;
+      background: rgba(255, 255, 255, 0.97);
+      border-radius: 10px;
+      padding: 5px 14px 5px 10px;
+      box-shadow: 0 2px 12px rgba(0, 0, 0, 0.30);
+      transition: var(--transition);
+    }
+
+    .nav-brand:hover .nav-logo-pill {
+      background: #ffffff;
+      box-shadow: 0 4px 20px rgba(33, 150, 243, 0.45);
+      transform: translateY(-1px);
+    }
+
+    .nav-brand-logo {
+      height: 46px;
+      width: auto;
+      object-fit: contain;
+      display: block;
+      /* SEM filter — mostra as cores reais do logo */
+    }
+
+    .nav-logo-text {
+      font-family: var(--font-title);
+      font-weight: 900;
+      font-size: 1.5rem;
+      color: white;
+      letter-spacing: 0.06em;
+    }
+
+    .nav-logo-text span {
+      color: var(--azul-acento);
+    }
+
+    .nav-sub {
+      font-family: var(--font-title);
+      font-size: 0.65rem;
+      color: var(--cinza-medio);
+      font-weight: 400;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      display: block;
+      line-height: 1;
+    }
+
+    .nav-location {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      color: var(--azul-acento);
+      font-size: 0.8rem;
+      font-family: var(--font-title);
+      font-weight: 600;
+    }
+
+    .nav-menu {
+      display: flex;
+      gap: 24px;
+      list-style: none;
+    }
+
+    .nav-menu a {
+      color: rgba(255,255,255,0.8);
+      text-decoration: none;
+      font-family: var(--font-title);
+      font-size: 0.8rem;
+      font-weight: 600;
+      letter-spacing: 0.05em;
+      transition: var(--transition);
+      text-transform: uppercase;
+    }
+
+    .nav-menu a:hover { color: var(--azul-acento); }
+
+    .nav-cta {
+      background: var(--verde-wa) !important;
+      color: white !important;
+      padding: 8px 18px !important;
+      border-radius: 20px !important;
+    }
+
+    .nav-cta:hover {
+      background: var(--verde-wa-dark) !important;
+      color: white !important;
+      transform: translateY(-1px);
+    }
+
+    /* ===== HERO SECTION ===== */
+    .hero {
+      background: linear-gradient(135deg, var(--azul-escuro) 0%, var(--azul-medio) 60%, #0d3b7a 100%);
+      min-height: 92vh;
+      display: flex;
+      align-items: center;
+      position: relative;
+      overflow: hidden;
+      padding: 80px 5%;
+    }
+
+    .hero::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%231e6ab4' fill-opacity='0.06'%3E%3Ccircle cx='30' cy='30' r='2'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+      opacity: 0.5;
+    }
+
+    .hero-content {
+      position: relative;
+      z-index: 2;
+      max-width: 680px;
+    }
+
+    /* Card do logo no hero — fundo branco elegante com sombra */
+    .hero-logo-card {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      background: rgba(255, 255, 255, 0.97);
+      border-radius: 16px;
+      padding: 14px 32px;
+      margin-bottom: 32px;
+      box-shadow:
+        0 6px 32px rgba(0, 0, 0, 0.35),
+        0 0 0 1px rgba(255,255,255,0.08);
+      backdrop-filter: blur(4px);
+    }
+
+    .hero-logo {
+      display: block;
+      height: clamp(60px, 9vw, 100px);
+      width: auto;
+      object-fit: contain;
+      /* SEM filter — cores naturais do logo */
+    }
+
+    .hero-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: rgba(33, 150, 243, 0.15);
+      border: 1px solid rgba(33, 150, 243, 0.4);
+      color: var(--azul-acento);
+      padding: 6px 16px;
+      border-radius: 30px;
+      font-family: var(--font-title);
+      font-size: 0.75rem;
+      font-weight: 700;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      margin-bottom: 24px;
+    }
+
+    .hero h1 {
+      font-family: var(--font-title);
+      font-size: clamp(2rem, 5vw, 3.4rem);
+      font-weight: 900;
+      color: white;
+      line-height: 1.15;
+      margin-bottom: 20px;
+      letter-spacing: -0.01em;
+    }
+
+    .hero h1 .accent {
+      color: var(--azul-acento);
+    }
+
+    .hero p {
+      font-size: 1.1rem;
+      color: rgba(255,255,255,0.82);
+      margin-bottom: 16px;
+      max-width: 560px;
+    }
+
+    .hero-location {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      color: var(--dourado);
+      font-family: var(--font-title);
+      font-size: 0.9rem;
+      font-weight: 700;
+      margin-bottom: 32px;
+    }
+
+    .hero-buttons {
+      display: flex;
+      gap: 16px;
+      flex-wrap: wrap;
+      margin-bottom: 48px;
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      padding: 14px 28px;
+      border-radius: var(--radius);
+      font-family: var(--font-title);
+      font-weight: 700;
+      font-size: 0.92rem;
+      text-decoration: none;
+      transition: var(--transition);
+      border: none;
+      cursor: pointer;
+      letter-spacing: 0.02em;
+    }
+
+    .btn-wa {
+      background: var(--verde-wa);
+      color: white;
+      box-shadow: 0 6px 20px rgba(37, 211, 102, 0.4);
+    }
+
+    .btn-wa:hover {
+      background: var(--verde-wa-dark);
+      transform: translateY(-3px);
+      box-shadow: 0 10px 30px rgba(37, 211, 102, 0.5);
+    }
+
+    .btn-outline {
+      background: transparent;
+      color: white;
+      border: 2px solid rgba(255,255,255,0.5);
+    }
+
+    .btn-outline:hover {
+      background: rgba(255,255,255,0.1);
+      border-color: white;
+      transform: translateY(-2px);
+    }
+
+    .btn-primary {
+      background: var(--azul-acento);
+      color: white;
+      box-shadow: 0 6px 20px rgba(33, 150, 243, 0.4);
+    }
+
+    .btn-primary:hover {
+      background: #1565C0;
+      transform: translateY(-3px);
+      box-shadow: 0 10px 30px rgba(33, 150, 243, 0.5);
+    }
+
+    .hero-stats {
+      display: flex;
+      gap: 32px;
+      flex-wrap: wrap;
+    }
+
+    .stat {
+      text-align: center;
+    }
+
+    .stat-number {
+      font-family: var(--font-title);
+      font-size: 2rem;
+      font-weight: 900;
+      color: var(--azul-acento);
+      line-height: 1;
+    }
+
+    .stat-label {
+      font-size: 0.75rem;
+      color: rgba(255,255,255,0.65);
+      font-weight: 600;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+    }
+
+    .hero-visual {
+      position: absolute;
+      right: 5%;
+      top: 50%;
+      transform: translateY(-50%);
+      z-index: 1;
+      opacity: 0.08;
+      font-size: clamp(180px, 20vw, 340px);
+      color: white;
+      pointer-events: none;
+      user-select: none;
+    }
+
+    /* ===== SEÇÃO VIAGEM RJ ===== */
+    .travel-section {
+      background: linear-gradient(135deg, #fff8f0 0%, #fff3e0 100%);
+      border-top: 4px solid var(--laranja-alerta);
+      padding: 64px 5%;
+    }
+
+    .travel-section .section-label {
+      color: var(--laranja-alerta);
+    }
+
+    .travel-cards {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 24px;
+      margin-top: 40px;
+    }
+
+    .travel-card {
+      background: white;
+      border-radius: var(--radius);
+      padding: 32px;
+      box-shadow: var(--shadow);
+      border-left: 5px solid var(--laranja-alerta);
+      transition: var(--transition);
+    }
+
+    .travel-card:hover {
+      transform: translateY(-4px);
+      box-shadow: var(--shadow-lg);
+    }
+
+    .travel-card-city {
+      font-family: var(--font-title);
+      font-size: 1.4rem;
+      font-weight: 900;
+      color: var(--azul-escuro);
+      margin-bottom: 4px;
+    }
+
+    .travel-card-state {
+      font-family: var(--font-title);
+      font-size: 0.8rem;
+      font-weight: 600;
+      color: var(--cinza-medio);
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      margin-bottom: 16px;
+    }
+
+    .travel-card p {
+      font-size: 0.9rem;
+      color: var(--texto-claro);
+      margin-bottom: 20px;
+    }
+
+    /* ===== SECTION LAYOUT ===== */
+    section {
+      padding: 80px 5%;
+    }
+
+    .section-label {
+      display: inline-block;
+      font-family: var(--font-title);
+      font-size: 0.72rem;
+      font-weight: 700;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      color: var(--azul-acento);
+      margin-bottom: 12px;
+    }
+
+    .section-title {
+      font-family: var(--font-title);
+      font-size: clamp(1.6rem, 3vw, 2.4rem);
+      font-weight: 800;
+      color: var(--azul-escuro);
+      line-height: 1.25;
+      margin-bottom: 16px;
+    }
+
+    .section-subtitle {
+      font-size: 1rem;
+      color: var(--texto-claro);
+      max-width: 600px;
+      margin-bottom: 48px;
+    }
+
+    /* ===== SERVIÇOS ===== */
+    .services-section {
+      background: var(--cinza-claro);
+    }
+
+    .services-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 24px;
+    }
+
+    .service-card {
+      background: white;
+      border-radius: var(--radius);
+      padding: 32px 28px;
+      box-shadow: var(--shadow);
+      transition: var(--transition);
+      cursor: default;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .service-card::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      height: 4px;
+      background: linear-gradient(90deg, var(--azul-acento), var(--azul-medio));
+      transform: scaleX(0);
+      transition: var(--transition);
+      transform-origin: left;
+    }
+
+    .service-card:hover {
+      transform: translateY(-6px);
+      box-shadow: var(--shadow-lg);
+    }
+
+    .service-card:hover::after {
+      transform: scaleX(1);
+    }
+
+    .service-icon {
+      width: 58px;
+      height: 58px;
+      background: linear-gradient(135deg, var(--azul-acento), var(--azul-medio));
+      border-radius: 14px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 20px;
+      font-size: 1.5rem;
+      color: white;
+      box-shadow: 0 4px 14px rgba(33, 150, 243, 0.3);
+    }
+
+    .service-card h3 {
+      font-family: var(--font-title);
+      font-size: 1rem;
+      font-weight: 700;
+      color: var(--azul-escuro);
+      margin-bottom: 10px;
+    }
+
+    .service-card p {
+      font-size: 0.88rem;
+      color: var(--texto-claro);
+      line-height: 1.6;
+      margin-bottom: 20px;
+    }
+
+    .service-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      font-family: var(--font-title);
+      font-size: 0.8rem;
+      font-weight: 700;
+      color: var(--verde-wa);
+      text-decoration: none;
+      transition: var(--transition);
+    }
+
+    .service-link:hover {
+      gap: 10px;
+      color: var(--verde-wa-dark);
+    }
+
+    /* ===== DIFERENCIAIS ===== */
+    .credentials-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 24px;
+      margin-top: 48px;
+    }
+
+    .credential-item {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      padding: 32px 20px;
+      background: var(--cinza-claro);
+      border-radius: var(--radius);
+      transition: var(--transition);
+    }
+
+    .credential-item:hover {
+      background: white;
+      box-shadow: var(--shadow);
+      transform: translateY(-4px);
+    }
+
+    .credential-icon {
+      font-size: 2.4rem;
+      margin-bottom: 16px;
+      color: var(--azul-acento);
+    }
+
+    .credential-item h4 {
+      font-family: var(--font-title);
+      font-size: 0.95rem;
+      font-weight: 700;
+      color: var(--azul-escuro);
+      margin-bottom: 8px;
+    }
+
+    .credential-item p {
+      font-size: 0.82rem;
+      color: var(--texto-claro);
+    }
+
+    /* ===== CONTATO / CTA SECTION ===== */
+    .cta-section {
+      background: linear-gradient(135deg, var(--azul-escuro) 0%, var(--azul-medio) 100%);
+      text-align: center;
+      color: white;
+    }
+
+    .cta-section .section-title {
+      color: white;
+    }
+
+    .cta-section .section-subtitle {
+      color: rgba(255,255,255,0.8);
+    }
+
+    .cta-buttons {
+      display: flex;
+      justify-content: center;
+      gap: 16px;
+      flex-wrap: wrap;
+      margin-top: 32px;
+    }
+
+    /* ===== RAÍCES DEL AMOR — PARCERIA ===== */
+    .raices-section {
+      background: linear-gradient(135deg, #f0f7ee 0%, #e8f5e3 100%);
+      border-top: 1px solid rgba(45, 80, 22, 0.15);
+    }
+
+    .raices-card {
+      background: white;
+      border-radius: var(--radius);
+      padding: 40px;
+      box-shadow: var(--shadow);
+      display: flex;
+      gap: 40px;
+      align-items: center;
+      flex-wrap: wrap;
+      border-left: 6px solid #4CAF50;
+    }
+
+    .raices-text h3 {
+      font-family: var(--font-title);
+      font-size: 1.3rem;
+      font-weight: 800;
+      color: #2D5016;
+      margin-bottom: 8px;
+    }
+
+    .raices-emoji {
+      font-size: 3.5rem;
+      flex-shrink: 0;
+    }
+
+    .raices-text p {
+      font-size: 0.9rem;
+      color: #4a5568;
+      margin-bottom: 20px;
+      max-width: 500px;
+    }
+
+    .raices-chips {
+      display: flex;
+      gap: 8px;
+      flex-wrap: wrap;
+      margin-bottom: 20px;
+    }
+
+    .chip {
+      background: #e8f5e3;
+      color: #2D5016;
+      border: 1px solid #a5d6a7;
+      padding: 4px 12px;
+      border-radius: 20px;
+      font-size: 0.75rem;
+      font-weight: 600;
+      font-family: var(--font-title);
+    }
+
+    .btn-raices {
+      background: #4CAF50;
+      color: white;
+      box-shadow: 0 4px 14px rgba(76, 175, 80, 0.35);
+    }
+
+    .btn-raices:hover {
+      background: #2D5016;
+      transform: translateY(-2px);
+      box-shadow: 0 8px 24px rgba(45, 80, 22, 0.4);
+    }
+
+    /* ===== FOOTER ===== */
+    footer {
+      background: #060f1e;
+      color: rgba(255,255,255,0.7);
+      padding: 48px 5% 24px;
+    }
+
+    .footer-grid {
+      display: grid;
+      grid-template-columns: 2fr 1fr 1fr;
+      gap: 40px;
+      margin-bottom: 40px;
+    }
+
+    .footer-brand h3 {
+      font-family: var(--font-title);
+      font-size: 1.3rem;
+      font-weight: 900;
+      color: white;
+      letter-spacing: 0.06em;
+      margin-bottom: 8px;
+    }
+
+    .footer-brand p {
+      font-size: 0.85rem;
+      line-height: 1.7;
+      margin-bottom: 16px;
+    }
+
+    .footer-location {
+      display: flex;
+      align-items: flex-start;
+      gap: 8px;
+      font-size: 0.82rem;
+      color: rgba(255,255,255,0.6);
+      margin-bottom: 8px;
+    }
+
+    .footer-location i {
+      color: var(--azul-acento);
+      margin-top: 3px;
+      flex-shrink: 0;
+    }
+
+    .footer-col h4 {
+      font-family: var(--font-title);
+      font-size: 0.85rem;
+      font-weight: 700;
+      color: white;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      margin-bottom: 16px;
+    }
+
+    .footer-links {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+    }
+
+    .footer-links a {
+      color: rgba(255,255,255,0.65);
+      text-decoration: none;
+      font-size: 0.85rem;
+      transition: var(--transition);
+    }
+
+    .footer-links a:hover {
+      color: var(--azul-acento);
+      padding-left: 4px;
+    }
+
+    .footer-wa-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      color: var(--verde-wa) !important;
+      font-weight: 600;
+    }
+
+    .footer-raices {
+      margin-top: 32px;
+      padding-top: 24px;
+      border-top: 1px solid rgba(255,255,255,0.08);
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      flex-wrap: wrap;
+    }
+
+    .footer-raices p {
+      font-size: 0.82rem;
+      color: rgba(255,255,255,0.5);
+    }
+
+    .footer-raices a {
+      color: #81c784;
+      text-decoration: none;
+      font-weight: 700;
+      font-family: var(--font-title);
+      transition: var(--transition);
+    }
+
+    .footer-raices a:hover {
+      color: #4CAF50;
+    }
+
+    .footer-bottom {
+      padding-top: 24px;
+      border-top: 1px solid rgba(255,255,255,0.06);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: gap;
+      font-size: 0.78rem;
+      color: rgba(255,255,255,0.35);
+      flex-wrap: wrap;
+      gap: 8px;
+    }
+
+    /* ===== WHATSAPP FAB ===== */
+    .wa-fab {
+      position: fixed;
+      bottom: 28px;
+      right: 28px;
+      z-index: 9999;
+      width: 60px;
+      height: 60px;
+      background: var(--verde-wa);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.8rem;
+      color: white;
+      text-decoration: none;
+      box-shadow: 0 4px 20px rgba(37, 211, 102, 0.5);
+      animation: pulseWA 2.5s infinite;
+      transition: var(--transition);
+    }
+
+    .wa-fab:hover {
+      background: var(--verde-wa-dark);
+      transform: scale(1.12);
+      box-shadow: 0 8px 30px rgba(37, 211, 102, 0.7);
+    }
+
+    @keyframes pulseWA {
+      0%, 100% { box-shadow: 0 4px 20px rgba(37, 211, 102, 0.5); }
+      50% { box-shadow: 0 4px 40px rgba(37, 211, 102, 0.8), 0 0 0 12px rgba(37, 211, 102, 0.1); }
+    }
+
+    /* ===== RESPONSIVO ===== */
+    @media (max-width: 900px) {
+      nav { flex-direction: column; padding: 16px 5%; gap: 12px; }
+      .nav-menu { gap: 12px; flex-wrap: wrap; justify-content: center; }
+      .hero { min-height: auto; padding: 60px 5%; }
+      .hero-visual { display: none; }
+      .footer-grid { grid-template-columns: 1fr; gap: 24px; }
+      .raices-card { flex-direction: column; gap: 20px; }
+    }
+
+    @media (max-width: 600px) {
+      .alert-banner { font-size: 0.78rem; }
+      .hero h1 { font-size: 1.8rem; }
+      .hero-stats { gap: 20px; }
+      .cta-buttons { flex-direction: column; align-items: center; }
+      section { padding: 56px 5%; }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- ===== FAIXA DE ALERTA: VIAGEM RJ ===== -->
+  <div class="alert-banner">
+    <i class="fas fa-map-marker-alt blink-slow"></i>
+    <span class="blink-slow">🗺️ PRÓXIMA VISITA: <strong>Teresópolis &amp; Sto. Antônio de Pádua – RJ</strong> · Vagas limitadas!</span>
+    <a href="https://wa.me/5519999548833?text=Olá%2C+Daniel!+Vi+que+você+estará+na+região+do+RJ+e+gostaria+de+agendar+um+atendimento+técnico." target="_blank" rel="noopener">
+      📅 Agendar agora
+    </a>
+  </div>
+
+  <!-- ===== NAVBAR ===== -->
+  <nav>
+    <a class="nav-brand" href="#">
+      <div class="nav-logo-pill">
+        <img class="nav-brand-logo" src="logo-visualcampo.pngg" alt="VISUALCAMPO — Treinamento e Serviços" />
+      </div>
+      <div>
+        <span class="nav-logo-text">VISUAL<span>CAMPO</span></span>
+        <span class="nav-sub">Serviços de Engenharia Clínica</span>
+      </div>
+    </a>
+    <div class="nav-location">
+      <i class="fas fa-map-marker-alt"></i>
+      Ribeirão Preto – SP
+    </div>
+    <ul class="nav-menu">
+      <li><a href="#servicos">Serviços</a></li>
+      <li><a href="#viagens">Agenda RJ</a></li>
+      <li><a href="#diferenciais">Diferenciais</a></li>
+      <li><a href="#raices">Parceria</a></li>
+      <li><a href="https://wa.me/5519999548833?text=Olá%2C+Daniel!+Gostaria+de+falar+sobre+serviços+de+Engenharia+Clínica." target="_blank" class="nav-cta"><i class="fab fa-whatsapp"></i> Contato</a></li>
+    </ul>
+  </nav>
+
+  <!-- ===== HERO ===== -->
+  <section class="hero">
+    <div class="hero-visual">
+      <i class="fas fa-eye"></i>
+    </div>
+    <div class="hero-content">
+      <div class="hero-logo-card">
+        <img class="hero-logo" src="logo-visualcampo.png" alt="VISUALCAMPO Treinamento e Serviços" />
+      </div>
+      <div class="hero-badge">
+        <i class="fas fa-certificate"></i>
+        Especialista Haag-Streit · Octopus · Zeiss
+      </div>
+      <h1>
+        <span class="accent">Serviços de Engenharia Clínica</span><br>
+        Oftalmológica de Alta Precisão
+      </h1>
+      <p>Manutenção, calibração, instalação e treinamento para perímetros Octopus e equipamentos de diagnóstico oftalmológico em todo o Brasil.</p>
+      <div class="hero-location">
+        <i class="fas fa-map-marker-alt"></i>
+        Ribeirão Preto – SP &nbsp;·&nbsp; Atendimento Nacional
+      </div>
+      <div class="hero-buttons">
+        <a class="btn btn-wa" href="https://wa.me/5519999548833?text=Olá%2C+Daniel!+Preciso+de+um+orçamento+para+serviços+de+Engenharia+Clínica+oftalmológica." target="_blank" rel="noopener">
+          <i class="fab fa-whatsapp"></i> Solicitar Orçamento
+        </a>
+        <a class="btn btn-outline" href="#servicos">
+          <i class="fas fa-tools"></i> Ver Serviços
+        </a>
+      </div>
+      <div class="hero-stats">
+        <div class="stat">
+          <div class="stat-number">20+</div>
+          <div class="stat-label">Anos de Exp.</div>
+        </div>
+        <div class="stat">
+          <div class="stat-number">500+</div>
+          <div class="stat-label">Equipamentos</div>
+        </div>
+        <div class="stat">
+          <div class="stat-number">Brasil</div>
+          <div class="stat-label">Cobertura</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== VIAGEM RJ ===== -->
+  <section class="travel-section" id="viagens">
+    <span class="section-label">📍 Agenda de Deslocamentos</span>
+    <h2 class="section-title">Próximas Visitas Técnicas — Região RJ</h2>
+    <p class="section-subtitle">Estaremos atendendo presencialmente na região. Vagas limitadas — agende com antecedência e garanta o seu horário.</p>
+
+    <div class="travel-cards">
+      <div class="travel-card">
+        <div class="travel-card-city">🏔️ Teresópolis</div>
+        <div class="travel-card-state">Rio de Janeiro – RJ</div>
+        <p>Atendimento presencial para clínicas, hospitais e consultórios oftalmológicos da região serrana do Rio de Janeiro. Manutenção de perímetros, calibração e suporte técnico especializado.</p>
+        <a class="btn btn-wa" href="https://wa.me/5519999548833?text=Olá%2C+Daniel!+Vi+que+você+estará+em+Teresópolis-RJ+e+gostaria+de+agendar+um+atendimento+técnico+para+meu+equipamento+oftalmológico." target="_blank" rel="noopener">
+          <i class="fab fa-whatsapp"></i> Agendar em Teresópolis
+        </a>
+      </div>
+
+      <div class="travel-card">
+        <div class="travel-card-city">🌾 Santo Antônio de Pádua</div>
+        <div class="travel-card-state">Rio de Janeiro – RJ</div>
+        <p>Visita técnica programada para a região norte-fluminense. Aproveitamos a rota para otimizar o atendimento a clínicas e hospitais que necessitam de suporte em engenharia clínica.</p>
+        <a class="btn btn-wa" href="https://wa.me/5519999548833?text=Olá%2C+Daniel!+Vi+que+você+estará+em+Santo+Antônio+de+Pádua-RJ+e+gostaria+de+agendar+um+atendimento+técnico." target="_blank" rel="noopener">
+          <i class="fab fa-whatsapp"></i> Agendar em Sto. Antônio de Pádua
+        </a>
+      </div>
+
+      <div class="travel-card" style="border-left-color: var(--azul-acento);">
+        <div class="travel-card-city" style="color: var(--azul-acento);">📡 Atendimento Remoto</div>
+        <div class="travel-card-state">Todo o Brasil</div>
+        <p>Suporte técnico remoto disponível para diagnósticos preliminares, orientações de operação e triagem de manutenção. Resolvemos muitos chamados sem deslocamento, com agilidade e economia.</p>
+        <a class="btn btn-primary" href="https://wa.me/5519999548833?text=Olá%2C+Daniel!+Preciso+de+suporte+técnico+remoto+para+meu+equipamento+oftalmológico." target="_blank" rel="noopener">
+          <i class="fab fa-whatsapp"></i> Suporte Remoto Agora
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== SERVIÇOS ===== -->
+  <section class="services-section" id="servicos">
+    <span class="section-label">🔧 O que fazemos</span>
+    <h2 class="section-title">Serviços de Engenharia Clínica Oftalmológica</h2>
+    <p class="section-subtitle">Cobertura técnica completa para equipamentos de diagnóstico visual, com rastreabilidade e padrão de fábrica internacional.</p>
+
+    <div class="services-grid">
+      <div class="service-card">
+        <div class="service-icon"><i class="fas fa-wrench"></i></div>
+        <h3>Manutenção Preventiva e Corretiva</h3>
+        <p>Revisões programadas e reparos emergenciais para Perímetros Octopus, campímetros e demais equipamentos oftalmológicos de diagnóstico.</p>
+        <a class="service-link" href="https://wa.me/5519999548833?text=Olá%2C+Daniel!+Preciso+de+manutenção+preventiva+e%2Fou+corretiva+para+meu+equipamento+oftalmológico." target="_blank" rel="noopener">
+          <i class="fab fa-whatsapp"></i> Solicitar via WhatsApp <i class="fas fa-arrow-right"></i>
+        </a>
+      </div>
+
+      <div class="service-card">
+        <div class="service-icon"><i class="fas fa-ruler-combined"></i></div>
+        <h3>Calibração e Validação de Laudos</h3>
+        <p>Calibração técnica seguindo padrões de fábrica Haag-Streit (Suíça), com emissão de relatório de conformidade e rastreabilidade metrológica.</p>
+        <a class="service-link" href="https://wa.me/5519999548833?text=Olá%2C+Daniel!+Preciso+de+calibração+e+validação+de+laudos+para+o+meu+perímetro+computadorizado." target="_blank" rel="noopener">
+          <i class="fab fa-whatsapp"></i> Solicitar via WhatsApp <i class="fas fa-arrow-right"></i>
+        </a>
+      </div>
+
+      <div class="service-card">
+        <div class="service-icon"><i class="fas fa-plug"></i></div>
+        <h3>Instalação e Start-up</h3>
+        <p>Instalação técnica, configuração e start-up de equipamentos novos, incluindo integração de software e testes de performance conforme especificações originais.</p>
+        <a class="service-link" href="https://wa.me/5519999548833?text=Olá%2C+Daniel!+Adquiri+um+equipamento+novo+e+preciso+de+instalação+e+start-up+especializado." target="_blank" rel="noopener">
+          <i class="fab fa-whatsapp"></i> Solicitar via WhatsApp <i class="fas fa-arrow-right"></i>
+        </a>
+      </div>
+
+      <div class="service-card">
+        <div class="service-icon"><i class="fas fa-chalkboard-teacher"></i></div>
+        <h3>Treinamento para Médicos e Operadores</h3>
+        <p>Capacitação técnica e operacional para equipes de clínicas e hospitais, maximizando o aproveitamento dos equipamentos e a qualidade dos exames.</p>
+        <a class="service-link" href="https://wa.me/5519999548833?text=Olá%2C+Daniel!+Tenho+interesse+em+treinamento+para+operadores+e+médicos+do+meu+equipamento+oftalmológico." target="_blank" rel="noopener">
+          <i class="fab fa-whatsapp"></i> Solicitar via WhatsApp <i class="fas fa-arrow-right"></i>
+        </a>
+      </div>
+
+      <div class="service-card">
+        <div class="service-icon"><i class="fas fa-laptop-medical"></i></div>
+        <h3>Suporte Técnico Remoto</h3>
+        <p>Diagnóstico e resolução remota de falhas operacionais e de software. Ideal para triagem de chamados antes de deslocamento presencial.</p>
+        <a class="service-link" href="https://wa.me/5519999548833?text=Olá%2C+Daniel!+Preciso+de+suporte+técnico+remoto+urgente+para+meu+equipamento." target="_blank" rel="noopener">
+          <i class="fab fa-whatsapp"></i> Suporte Remoto Agora <i class="fas fa-arrow-right"></i>
+        </a>
+      </div>
+
+      <div class="service-card">
+        <div class="service-icon"><i class="fas fa-file-contract"></i></div>
+        <h3>Contratos de Manutenção Preventiva</h3>
+        <p>Planos anuais de manutenção com visitas programadas, prioridade no atendimento e redução significativa de custos operacionais.</p>
+        <a class="service-link" href="https://wa.me/5519999548833?text=Olá%2C+Daniel!+Gostaria+de+conhecer+os+planos+de+contrato+de+manutenção+preventiva+anual." target="_blank" rel="noopener">
+          <i class="fab fa-whatsapp"></i> Solicitar via WhatsApp <i class="fas fa-arrow-right"></i>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== DIFERENCIAIS ===== -->
+  <section id="diferenciais">
+    <span class="section-label">⭐ Por que nos escolher</span>
+    <h2 class="section-title">Autoridade Técnica Comprovada</h2>
+    <p class="section-subtitle">Décadas de experiência exclusiva em engenharia clínica oftalmológica, com certificação e treinamento direto de fábrica.</p>
+
+    <div class="credentials-grid">
+      <div class="credential-item">
+        <div class="credential-icon"><i class="fas fa-certificate"></i></div>
+        <h4>Treinamento Haag-Streit</h4>
+        <p>Capacitação técnica oficial realizada nas instalações da Haag-Streit, Suíça — fabricante dos Perímetros Octopus.</p>
+      </div>
+      <div class="credential-item">
+        <div class="credential-icon"><i class="fas fa-eye"></i></div>
+        <h4>Especialista Octopus</h4>
+        <p>Profundo conhecimento de hardware, software e firmware das linhas Octopus 600, 900 e G-TOP.</p>
+      </div>
+      <div class="credential-item">
+        <div class="credential-icon"><i class="fas fa-map-marked-alt"></i></div>
+        <h4>Atendimento Nacional</h4>
+        <p>Cobertura em todo o território brasileiro. Deslocamentos programados e suporte remoto para qualquer estado.</p>
+      </div>
+      <div class="credential-item">
+        <div class="credential-icon"><i class="fas fa-shield-alt"></i></div>
+        <h4>Conformidade Regulatória</h4>
+        <p>Serviços alinhados às normas da ANVISA e boas práticas de engenharia clínica hospitalar.</p>
+      </div>
+      <div class="credential-item">
+        <div class="credential-icon"><i class="fas fa-bolt"></i></div>
+        <h4>Resposta Ágil</h4>
+        <p>Diagnóstico remoto em horas. Atendimento presencial planejado com eficiência logística para minimizar downtime.</p>
+      </div>
+      <div class="credential-item">
+        <div class="credential-icon"><i class="fas fa-handshake"></i></div>
+        <h4>Relacionamento Direto</h4>
+        <p>Atendimento personalizado com o engenheiro especialista diretamente — sem intermediários ou call centers.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== RAÍCES DEL AMOR — PARCERIA ===== -->
+  <section class="raices-section" id="raices">
+    <span class="section-label">🌿 Parceria de Cuidado Integral</span>
+    <h2 class="section-title">Cuidamos da Saúde dos Equipamentos.<br>E da Saúde das Pessoas.</h2>
+    <p class="section-subtitle">Uma indicação especial para quem busca também o cuidado humano e o autoconhecimento.</p>
+
+    <div class="raices-card">
+      <div class="raices-emoji">🌿</div>
+      <div class="raices-text">
+        <h3>Espaço Terapêutico RAÍCES DEL AMOR</h3>
+        <p>Um espaço de cura, autoconhecimento e evolução humana em Ribeirão Preto–SP. Conduzido por <strong>Elena Aberastain</strong> e uma equipe de terapeutas dedicados ao cuidado humanizado de crianças, jovens, adultos e idosos.</p>
+        <div class="raices-chips">
+          <span class="chip">Biomagnetismo</span>
+          <span class="chip">Constelação Familiar</span>
+          <span class="chip">Reiki</span>
+          <span class="chip">Reflexologia Podal</span>
+          <span class="chip">CNV</span>
+          <span class="chip">Autoconhecimento</span>
+          <span class="chip">Radiestesia</span>
+          <span class="chip">Terapias Multidimensionais</span>
+        </div>
+        <p><i class="fas fa-map-marker-alt" style="color:#4CAF50"></i> Rua Felipe Ache, 567 – Bairro São Luiz – Ribeirão Preto–SP</p>
+        <a class="btn btn-raices" href="https://wa.me/5519999548833?text=Olá!+Vi+a+indicação+do+Espaço+RAÍCES+DEL+AMOR+no+site+VISUALCAMPO+e+gostaria+de+saber+mais+sobre+as+terapias+disponíveis." target="_blank" rel="noopener">
+          <i class="fab fa-whatsapp"></i> Conhecer o Espaço Raíces
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== CTA FINAL ===== -->
+  <section class="cta-section" id="contato">
+    <span class="section-label" style="color: rgba(255,255,255,0.6)">📞 Fale Conosco</span>
+    <h2 class="section-title">Equipamento com Problema?<br>Fale Direto com o Especialista.</h2>
+    <p class="section-subtitle" style="margin: 0 auto 8px;">Atendimento direto, sem intermediários. Resposta rápida e solução eficaz.</p>
+    <p class="section-subtitle" style="margin: 0 auto;">
+      <i class="fas fa-map-marker-alt"></i> <strong style="color:white">Ribeirão Preto–SP</strong> &nbsp;|&nbsp; Atendimento em todo o Brasil
+    </p>
+    <div class="cta-buttons">
+      <a class="btn btn-wa" style="font-size: 1.05rem; padding: 16px 36px;" href="https://wa.me/5519999548833?text=Olá%2C+Daniel!+Preciso+de+suporte+em+Serviços+de+Engenharia+Clínica+para+meu+equipamento+oftalmológico." target="_blank" rel="noopener">
+        <i class="fab fa-whatsapp"></i> Chamar no WhatsApp Agora
+      </a>
+      <a class="btn btn-outline" href="https://wa.me/5519999548833?text=Olá%2C+Daniel!+Estou+interessado+em+um+contrato+de+manutenção+preventiva+anual." target="_blank" rel="noopener">
+        <i class="fas fa-file-signature"></i> Solicitar Contrato Anual
+      </a>
+    </div>
+  </section>
+
+  <!-- ===== FOOTER ===== -->
+  <footer>
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <h3>VISUALCAMPO</h3>
+        <p>Serviços de Engenharia Clínica Oftalmológica com padrão de excelência internacional. Especialistas em perímetros Octopus e equipamentos de diagnóstico visual.</p>
+        <div class="footer-location">
+          <i class="fas fa-map-marker-alt"></i>
+          <span>Ribeirão Preto – SP | Atendimento Nacional</span>
+        </div>
+        <div class="footer-location">
+          <i class="fab fa-whatsapp" style="color: var(--verde-wa)"></i>
+          <a href="https://wa.me/5519999548833" target="_blank" class="footer-wa-link">+55 (19) 99954-8833</a>
+        </div>
+        <div class="footer-location">
+          <i class="fas fa-globe"></i>
+          <span>www.visualcampo.com.br</span>
+        </div>
+      </div>
+
+      <div class="footer-col">
+        <h4>Serviços</h4>
+        <ul class="footer-links">
+          <li><a href="https://wa.me/5519999548833?text=Olá!+Preciso+de+manutenção+corretiva+para+meu+equipamento." target="_blank">Manutenção Corretiva</a></li>
+          <li><a href="https://wa.me/5519999548833?text=Olá!+Preciso+de+manutenção+preventiva+para+meu+equipamento." target="_blank">Manutenção Preventiva</a></li>
+          <li><a href="https://wa.me/5519999548833?text=Olá!+Preciso+de+calibração+para+meu+perímetro." target="_blank">Calibração e Validação</a></li>
+          <li><a href="https://wa.me/5519999548833?text=Olá!+Preciso+de+instalação+de+equipamento+novo." target="_blank">Instalação e Start-up</a></li>
+          <li><a href="https://wa.me/5519999548833?text=Olá!+Tenho+interesse+em+treinamento+técnico." target="_blank">Treinamentos</a></li>
+          <li><a href="https://wa.me/5519999548833?text=Olá!+Preciso+de+suporte+remoto+agora." target="_blank">Suporte Remoto</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h4>Agenda RJ</h4>
+        <ul class="footer-links">
+          <li><a href="https://wa.me/5519999548833?text=Olá!+Quero+agendar+atendimento+em+Teresópolis-RJ." target="_blank">📍 Teresópolis–RJ</a></li>
+          <li><a href="https://wa.me/5519999548833?text=Olá!+Quero+agendar+atendimento+em+Santo+Antônio+de+Pádua-RJ." target="_blank">📍 Sto. Antônio de Pádua–RJ</a></li>
+          <li><a href="https://wa.me/5519999548833?text=Olá!+Quero+agendar+suporte+remoto." target="_blank">📡 Suporte Remoto</a></li>
+        </ul>
+        <br />
+        <h4>Contato Direto</h4>
+        <ul class="footer-links">
+          <li>
+            <a href="https://wa.me/5519999548833" target="_blank" class="footer-wa-link">
+              <i class="fab fa-whatsapp"></i> WhatsApp Daniel
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="footer-raices">
+      <span>🌿</span>
+      <p>Parceiro de bem-estar:</p>
+      <a href="https://wa.me/5519999548833?text=Olá!+Gostaria+de+saber+mais+sobre+o+Espaço+Terapêutico+RAÍCES+DEL+AMOR+em+Ribeirão+Preto." target="_blank">
+        Espaço Terapêutico RAÍCES DEL AMOR
+      </a>
+      <span style="color: rgba(255,255,255,0.3)">·</span>
+      <p>Elena Aberastain · Ribeirão Preto–SP · Rua Felipe Ache, 567 – Bairro São Luiz</p>
+    </div>
+
+    <div class="footer-bottom">
+      <span>© 2026 VISUALCAMPO — Serviços de Engenharia Clínica. Ribeirão Preto–SP.</span>
+      <span>Atendimento Nacional · <a href="https://wa.me/5519999548833" target="_blank" style="color: var(--verde-wa); text-decoration: none;">+55 (19) 99954-8833</a></span>
+    </div>
+  </footer>
+
+  <!-- ===== WHATSAPP FAB ===== -->
+  <a class="wa-fab" href="https://wa.me/5519999548833?text=Olá%2C+Daniel!+Preciso+de+atendimento+em+Serviços+de+Engenharia+Clínica+oftalmológica." target="_blank" rel="noopener" title="Chamar no WhatsApp">
+    <i class="fab fa-whatsapp"></i>
+  </a>
+
+</body>
+</html>
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="VISUALCAMPO — Serviços de Engenharia Clínica Oftalmológica. Especialistas em Perímetros Octopus (Haag-Streit). Ribeirão Preto–SP. Atendimento em todo o Brasil." />
+  <meta name="keywords" content="engenharia clínica, oftalmologia, perimetro octopus, haag-streit, manutenção equipamentos, calibração, ribeirão preto, teresópolis, santo antonio de padua" />
+  <meta property="og:title" content="VISUALCAMPO — Serviços de Engenharia Clínica Oftalmológica" />
+  <meta property="og:description" content="Especialista em perímetros Octopus e equipamentos de diagnóstico oftalmológico. Ribeirão Preto–SP." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://www.visualcampo.com.br" />
+
+  <title>VISUALCAMPO — Serviços de Engenharia Clínica Oftalmológica</title>
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700;900&family=Open+Sans:wght@300;400;600&display=swap" rel="stylesheet" />
+
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+
+  <style>
+    /* ===== VARIÁVEIS E RESET ===== */
+    :root {
+      --azul-escuro: #0a1f3c;
+      --azul-medio: #1a3a6b;
+      --azul-claro: #1e6ab4;
+      --azul-acento: #2196F3;
+      --verde-wa: #25D366;
+      --verde-wa-dark: #128C7E;
+      --cinza-claro: #f5f7fa;
+      --cinza-medio: #8e9aaf;
+      --branco: #ffffff;
+      --texto: #1a1a2e;
+      --texto-claro: #4a5568;
+      --dourado: #c9a227;
+      --laranja-alerta: #ff6b35;
+      --font-title: 'Montserrat', sans-serif;
+      --font-body: 'Open Sans', sans-serif;
+      --shadow: 0 4px 24px rgba(10, 31, 60, 0.12);
+      --shadow-lg: 0 8px 40px rgba(10, 31, 60, 0.20);
+      --radius: 12px;
+      --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+
+    *, *::before, *::after {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      font-family: var(--font-body);
+      color: var(--texto);
+      background: var(--branco);
+      line-height: 1.7;
+      overflow-x: hidden;
+    }
+
+    /* ===== BLINKING — FAIXA DE ALERTA ===== */
+    @keyframes blinkSlow {
+      0%, 100% { opacity: 1; }
+      50%       { opacity: 0.35; }
+    }
+
+    .blink-slow {
+      animation: blinkSlow 8.0s ease-in-out infinite;
+    }
+
+    /* ===== FAIXA DE ALERTA — VIAGEM RJ ===== */
+    .alert-banner {
+      background: linear-gradient(90deg, var(--laranja-alerta) 0%, #ff4500 100%);
+      color: white;
+      text-align: center;
+      padding: 10px 20px;
+      font-family: var(--font-title);
+      font-size: 0.88rem;
+      font-weight: 600;
+      letter-spacing: 0.02em;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 12px;
+      flex-wrap: wrap;
+    }
+
+    .alert-banner a {
+      color: white;
+      background: rgba(255,255,255,0.2);
+      padding: 4px 14px;
+      border-radius: 20px;
+      text-decoration: none;
+      font-weight: 700;
+      border: 1px solid rgba(255,255,255,0.5);
+      transition: var(--transition);
+      white-space: nowrap;
+    }
+
+    .alert-banner a:hover {
+      background: white;
+      color: var(--laranja-alerta);
+    }
+
+    /* ===== NAVBAR ===== */
+    nav {
+      background: var(--azul-escuro);
+      padding: 0 5%;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      min-height: 68px;
+      position: sticky;
+      top: 40px;
+      z-index: 999;
+      box-shadow: var(--shadow);
+    }
+
+    .nav-brand {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      text-decoration: none;
+    }
+
+    .nav-brand-logo {
+      height: 52px;
+      width: auto;
+      object-fit: contain;
+      filter: brightness(0) invert(1);  /* torna branco sobre fundo escuro */
+      transition: var(--transition);
+    }
+
+    .nav-brand:hover .nav-brand-logo {
+      filter: brightness(0) invert(1) drop-shadow(0 0 6px rgba(33,150,243,0.7));
+    }
+
+    .nav-logo-text {
+      font-family: var(--font-title);
+      font-weight: 900;
+      font-size: 1.5rem;
+      color: white;
+      letter-spacing: 0.06em;
+    }
+
+    .nav-logo-text span {
+      color: var(--azul-acento);
+    }
+
+    .nav-sub {
+      font-family: var(--font-title);
+      font-size: 0.65rem;
+      color: var(--cinza-medio);
+      font-weight: 400;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      display: block;
+      line-height: 1;
+    }
+
+    .nav-location {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      color: var(--azul-acento);
+      font-size: 0.8rem;
+      font-family: var(--font-title);
+      font-weight: 600;
+    }
+
+    .nav-menu {
+      display: flex;
+      gap: 24px;
+      list-style: none;
+    }
+
+    .nav-menu a {
+      color: rgba(255,255,255,0.8);
+      text-decoration: none;
+      font-family: var(--font-title);
+      font-size: 0.8rem;
+      font-weight: 600;
+      letter-spacing: 0.05em;
+      transition: var(--transition);
+      text-transform: uppercase;
+    }
+
+    .nav-menu a:hover { color: var(--azul-acento); }
+
+    .nav-cta {
+      background: var(--verde-wa) !important;
+      color: white !important;
+      padding: 8px 18px !important;
+      border-radius: 20px !important;
+    }
+
+    .nav-cta:hover {
+      background: var(--verde-wa-dark) !important;
+      color: white !important;
+      transform: translateY(-1px);
+    }
+
+    /* ===== HERO SECTION ===== */
+    .hero {
+      background: linear-gradient(135deg, var(--azul-escuro) 0%, var(--azul-medio) 60%, #0d3b7a 100%);
+      min-height: 92vh;
+      display: flex;
+      align-items: center;
+      position: relative;
+      overflow: hidden;
+      padding: 80px 5%;
+    }
+
+    .hero::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%231e6ab4' fill-opacity='0.06'%3E%3Ccircle cx='30' cy='30' r='2'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+      opacity: 0.5;
+    }
+
+    .hero-content {
+      position: relative;
+      z-index: 2;
+      max-width: 680px;
+    }
+
+    .hero-logo {
+      display: block;
+      height: clamp(70px, 10vw, 110px);
+      width: auto;
+      object-fit: contain;
+      filter: brightness(0) invert(1);
+      margin-bottom: 28px;
+      opacity: 0.95;
+      drop-shadow: 0 4px 20px rgba(33,150,243,0.5);
+    }
+
+    .hero-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: rgba(33, 150, 243, 0.15);
+      border: 1px solid rgba(33, 150, 243, 0.4);
+      color: var(--azul-acento);
+      padding: 6px 16px;
+      border-radius: 30px;
+      font-family: var(--font-title);
+      font-size: 0.75rem;
+      font-weight: 700;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      margin-bottom: 24px;
+    }
+
+    .hero h1 {
+      font-family: var(--font-title);
+      font-size: clamp(2rem, 5vw, 3.4rem);
+      font-weight: 900;
+      color: white;
+      line-height: 1.15;
+      margin-bottom: 20px;
+      letter-spacing: -0.01em;
+    }
+
+    .hero h1 .accent {
+      color: var(--azul-acento);
+    }
+
+    .hero p {
+      font-size: 1.1rem;
+      color: rgba(255,255,255,0.82);
+      margin-bottom: 16px;
+      max-width: 560px;
+    }
+
+    .hero-location {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      color: var(--dourado);
+      font-family: var(--font-title);
+      font-size: 0.9rem;
+      font-weight: 700;
+      margin-bottom: 32px;
+    }
+
+    .hero-buttons {
+      display: flex;
+      gap: 16px;
+      flex-wrap: wrap;
+      margin-bottom: 48px;
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      padding: 14px 28px;
+      border-radius: var(--radius);
+      font-family: var(--font-title);
+      font-weight: 700;
+      font-size: 0.92rem;
+      text-decoration: none;
+      transition: var(--transition);
+      border: none;
+      cursor: pointer;
+      letter-spacing: 0.02em;
+    }
+
+    .btn-wa {
+      background: var(--verde-wa);
+      color: white;
+      box-shadow: 0 6px 20px rgba(37, 211, 102, 0.4);
+    }
+
+    .btn-wa:hover {
+      background: var(--verde-wa-dark);
+      transform: translateY(-3px);
+      box-shadow: 0 10px 30px rgba(37, 211, 102, 0.5);
+    }
+
+    .btn-outline {
+      background: transparent;
+      color: white;
+      border: 2px solid rgba(255,255,255,0.5);
+    }
+
+    .btn-outline:hover {
+      background: rgba(255,255,255,0.1);
+      border-color: white;
+      transform: translateY(-2px);
+    }
+
+    .btn-primary {
+      background: var(--azul-acento);
+      color: white;
+      box-shadow: 0 6px 20px rgba(33, 150, 243, 0.4);
+    }
+
+    .btn-primary:hover {
+      background: #1565C0;
+      transform: translateY(-3px);
+      box-shadow: 0 10px 30px rgba(33, 150, 243, 0.5);
+    }
+
+    .hero-stats {
+      display: flex;
+      gap: 32px;
+      flex-wrap: wrap;
+    }
+
+    .stat {
+      text-align: center;
+    }
+
+    .stat-number {
+      font-family: var(--font-title);
+      font-size: 2rem;
+      font-weight: 900;
+      color: var(--azul-acento);
+      line-height: 1;
+    }
+
+    .stat-label {
+      font-size: 0.75rem;
+      color: rgba(255,255,255,0.65);
+      font-weight: 600;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+    }
+
+    .hero-visual {
+      position: absolute;
+      right: 5%;
+      top: 50%;
+      transform: translateY(-50%);
+      z-index: 1;
+      opacity: 0.08;
+      font-size: clamp(180px, 20vw, 340px);
+      color: white;
+      pointer-events: none;
+      user-select: none;
+    }
+
+    /* ===== SEÇÃO VIAGEM RJ ===== */
+    .travel-section {
+      background: linear-gradient(135deg, #fff8f0 0%, #fff3e0 100%);
+      border-top: 4px solid var(--laranja-alerta);
+      padding: 64px 5%;
+    }
+
+    .travel-section .section-label {
+      color: var(--laranja-alerta);
+    }
+
+    .travel-cards {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 24px;
+      margin-top: 40px;
+    }
+
+    .travel-card {
+      background: white;
+      border-radius: var(--radius);
+      padding: 32px;
+      box-shadow: var(--shadow);
+      border-left: 5px solid var(--laranja-alerta);
+      transition: var(--transition);
+    }
+
+    .travel-card:hover {
+      transform: translateY(-4px);
+      box-shadow: var(--shadow-lg);
+    }
+
+    .travel-card-city {
+      font-family: var(--font-title);
+      font-size: 1.4rem;
+      font-weight: 900;
+      color: var(--azul-escuro);
+      margin-bottom: 4px;
+    }
+
+    .travel-card-state {
+      font-family: var(--font-title);
+      font-size: 0.8rem;
+      font-weight: 600;
+      color: var(--cinza-medio);
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      margin-bottom: 16px;
+    }
+
+    .travel-card p {
+      font-size: 0.9rem;
+      color: var(--texto-claro);
+      margin-bottom: 20px;
+    }
+
+    /* ===== SECTION LAYOUT ===== */
+    section {
+      padding: 80px 5%;
+    }
+
+    .section-label {
+      display: inline-block;
+      font-family: var(--font-title);
+      font-size: 0.72rem;
+      font-weight: 700;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      color: var(--azul-acento);
+      margin-bottom: 12px;
+    }
+
+    .section-title {
+      font-family: var(--font-title);
+      font-size: clamp(1.6rem, 3vw, 2.4rem);
+      font-weight: 800;
+      color: var(--azul-escuro);
+      line-height: 1.25;
+      margin-bottom: 16px;
+    }
+
+    .section-subtitle {
+      font-size: 1rem;
+      color: var(--texto-claro);
+      max-width: 600px;
+      margin-bottom: 48px;
+    }
+
+    /* ===== SERVIÇOS ===== */
+    .services-section {
+      background: var(--cinza-claro);
+    }
+
+    .services-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 24px;
+    }
+
+    .service-card {
+      background: white;
+      border-radius: var(--radius);
+      padding: 32px 28px;
+      box-shadow: var(--shadow);
+      transition: var(--transition);
+      cursor: default;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .service-card::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      height: 4px;
+      background: linear-gradient(90deg, var(--azul-acento), var(--azul-medio));
+      transform: scaleX(0);
+      transition: var(--transition);
+      transform-origin: left;
+    }
+
+    .service-card:hover {
+      transform: translateY(-6px);
+      box-shadow: var(--shadow-lg);
+    }
+
+    .service-card:hover::after {
+      transform: scaleX(1);
+    }
+
+    .service-icon {
+      width: 58px;
+      height: 58px;
+      background: linear-gradient(135deg, var(--azul-acento), var(--azul-medio));
+      border-radius: 14px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 20px;
+      font-size: 1.5rem;
+      color: white;
+      box-shadow: 0 4px 14px rgba(33, 150, 243, 0.3);
+    }
+
+    .service-card h3 {
+      font-family: var(--font-title);
+      font-size: 1rem;
+      font-weight: 700;
+      color: var(--azul-escuro);
+      margin-bottom: 10px;
+    }
+
+    .service-card p {
+      font-size: 0.88rem;
+      color: var(--texto-claro);
+      line-height: 1.6;
+      margin-bottom: 20px;
+    }
+
+    .service-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      font-family: var(--font-title);
+      font-size: 0.8rem;
+      font-weight: 700;
+      color: var(--verde-wa);
+      text-decoration: none;
+      transition: var(--transition);
+    }
+
+    .service-link:hover {
+      gap: 10px;
+      color: var(--verde-wa-dark);
+    }
+
+    /* ===== DIFERENCIAIS ===== */
+    .credentials-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 24px;
+      margin-top: 48px;
+    }
+
+    .credential-item {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      padding: 32px 20px;
+      background: var(--cinza-claro);
+      border-radius: var(--radius);
+      transition: var(--transition);
+    }
+
+    .credential-item:hover {
+      background: white;
+      box-shadow: var(--shadow);
+      transform: translateY(-4px);
+    }
+
+    .credential-icon {
+      font-size: 2.4rem;
+      margin-bottom: 16px;
+      color: var(--azul-acento);
+    }
+
+    .credential-item h4 {
+      font-family: var(--font-title);
+      font-size: 0.95rem;
+      font-weight: 700;
+      color: var(--azul-escuro);
+      margin-bottom: 8px;
+    }
+
+    .credential-item p {
+      font-size: 0.82rem;
+      color: var(--texto-claro);
+    }
+
+    /* ===== CONTATO / CTA SECTION ===== */
+    .cta-section {
+      background: linear-gradient(135deg, var(--azul-escuro) 0%, var(--azul-medio) 100%);
+      text-align: center;
+      color: white;
+    }
+
+    .cta-section .section-title {
+      color: white;
+    }
+
+    .cta-section .section-subtitle {
+      color: rgba(255,255,255,0.8);
+    }
+
+    .cta-buttons {
+      display: flex;
+      justify-content: center;
+      gap: 16px;
+      flex-wrap: wrap;
+      margin-top: 32px;
+    }
+
+    /* ===== RAÍCES DEL AMOR — PARCERIA ===== */
+    .raices-section {
+      background: linear-gradient(135deg, #f0f7ee 0%, #e8f5e3 100%);
+      border-top: 1px solid rgba(45, 80, 22, 0.15);
+    }
+
+    .raices-card {
+      background: white;
+      border-radius: var(--radius);
+      padding: 40px;
+      box-shadow: var(--shadow);
+      display: flex;
+      gap: 40px;
+      align-items: center;
+      flex-wrap: wrap;
+      border-left: 6px solid #4CAF50;
+    }
+
+    .raices-text h3 {
+      font-family: var(--font-title);
+      font-size: 1.3rem;
+      font-weight: 800;
+      color: #2D5016;
+      margin-bottom: 8px;
+    }
+
+    .raices-emoji {
+      font-size: 3.5rem;
+      flex-shrink: 0;
+    }
+
+    .raices-text p {
+      font-size: 0.9rem;
+      color: #4a5568;
+      margin-bottom: 20px;
+      max-width: 500px;
+    }
+
+    .raices-chips {
+      display: flex;
+      gap: 8px;
+      flex-wrap: wrap;
+      margin-bottom: 20px;
+    }
+
+    .chip {
+      background: #e8f5e3;
+      color: #2D5016;
+      border: 1px solid #a5d6a7;
+      padding: 4px 12px;
+      border-radius: 20px;
+      font-size: 0.75rem;
+      font-weight: 600;
+      font-family: var(--font-title);
+    }
+
+    .btn-raices {
+      background: #4CAF50;
+      color: white;
+      box-shadow: 0 4px 14px rgba(76, 175, 80, 0.35);
+    }
+
+    .btn-raices:hover {
+      background: #2D5016;
+      transform: translateY(-2px);
+      box-shadow: 0 8px 24px rgba(45, 80, 22, 0.4);
+    }
+
+    /* ===== FOOTER ===== */
+    footer {
+      background: #060f1e;
+      color: rgba(255,255,255,0.7);
+      padding: 48px 5% 24px;
+    }
+
+    .footer-grid {
+      display: grid;
+      grid-template-columns: 2fr 1fr 1fr;
+      gap: 40px;
+      margin-bottom: 40px;
+    }
+
+    .footer-brand h3 {
+      font-family: var(--font-title);
+      font-size: 1.3rem;
+      font-weight: 900;
+      color: white;
+      letter-spacing: 0.06em;
+      margin-bottom: 8px;
+    }
+
+    .footer-brand p {
+      font-size: 0.85rem;
+      line-height: 1.7;
+      margin-bottom: 16px;
+    }
+
+    .footer-location {
+      display: flex;
+      align-items: flex-start;
+      gap: 8px;
+      font-size: 0.82rem;
+      color: rgba(255,255,255,0.6);
+      margin-bottom: 8px;
+    }
+
+    .footer-location i {
+      color: var(--azul-acento);
+      margin-top: 3px;
+      flex-shrink: 0;
+    }
+
+    .footer-col h4 {
+      font-family: var(--font-title);
+      font-size: 0.85rem;
+      font-weight: 700;
+      color: white;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      margin-bottom: 16px;
+    }
+
+    .footer-links {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+    }
+
+    .footer-links a {
+      color: rgba(255,255,255,0.65);
+      text-decoration: none;
+      font-size: 0.85rem;
+      transition: var(--transition);
+    }
+
+    .footer-links a:hover {
+      color: var(--azul-acento);
+      padding-left: 4px;
+    }
+
+    .footer-wa-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      color: var(--verde-wa) !important;
+      font-weight: 600;
+    }
+
+    .footer-raices {
+      margin-top: 32px;
+      padding-top: 24px;
+      border-top: 1px solid rgba(255,255,255,0.08);
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      flex-wrap: wrap;
+    }
+
+    .footer-raices p {
+      font-size: 0.82rem;
+      color: rgba(255,255,255,0.5);
+    }
+
+    .footer-raices a {
+      color: #81c784;
+      text-decoration: none;
+      font-weight: 700;
+      font-family: var(--font-title);
+      transition: var(--transition);
+    }
+
+    .footer-raices a:hover {
+      color: #4CAF50;
+    }
+
+    .footer-bottom {
+      padding-top: 24px;
+      border-top: 1px solid rgba(255,255,255,0.06);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: gap;
+      font-size: 0.78rem;
+      color: rgba(255,255,255,0.35);
+      flex-wrap: wrap;
+      gap: 8px;
+    }
+
+    /* ===== WHATSAPP FAB ===== */
+    .wa-fab {
+      position: fixed;
+      bottom: 28px;
+      right: 28px;
+      z-index: 9999;
+      width: 60px;
+      height: 60px;
+      background: var(--verde-wa);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.8rem;
+      color: white;
+      text-decoration: none;
+      box-shadow: 0 4px 20px rgba(37, 211, 102, 0.5);
+      animation: pulseWA 2.5s infinite;
+      transition: var(--transition);
+    }
+
+    .wa-fab:hover {
+      background: var(--verde-wa-dark);
+      transform: scale(1.12);
+      box-shadow: 0 8px 30px rgba(37, 211, 102, 0.7);
+    }
+
+    @keyframes pulseWA {
+      0%, 100% { box-shadow: 0 4px 20px rgba(37, 211, 102, 0.5); }
+      50% { box-shadow: 0 4px 40px rgba(37, 211, 102, 0.8), 0 0 0 12px rgba(37, 211, 102, 0.1); }
+    }
+
+    /* ===== RESPONSIVO ===== */
+    @media (max-width: 900px) {
+      nav { flex-direction: column; padding: 16px 5%; gap: 12px; }
+      .nav-menu { gap: 12px; flex-wrap: wrap; justify-content: center; }
+      .hero { min-height: auto; padding: 60px 5%; }
+      .hero-visual { display: none; }
+      .footer-grid { grid-template-columns: 1fr; gap: 24px; }
+      .raices-card { flex-direction: column; gap: 20px; }
+    }
+
+    @media (max-width: 600px) {
+      .alert-banner { font-size: 0.78rem; }
+      .hero h1 { font-size: 1.8rem; }
+      .hero-stats { gap: 20px; }
+      .cta-buttons { flex-direction: column; align-items: center; }
+      section { padding: 56px 5%; }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- ===== FAIXA DE ALERTA: VIAGEM RJ ===== -->
+  <div class="alert-banner">
+    <i class="fas fa-map-marker-alt blink-slow"></i>
+    <span class="blink-slow">🗺️ PRÓXIMA VISITA: <strong>Teresópolis &amp; Sto. Antônio de Pádua – RJ</strong> · Vagas limitadas!</span>
+    <a href="https://wa.me/5519999548833?text=Olá%2C+Daniel!+Vi+que+você+estará+na+região+do+RJ+e+gostaria+de+agendar+um+atendimento+técnico." target="_blank" rel="noopener">
+      📅 Agendar agora
+    </a>
+  </div>
+
+  <!-- ===== NAVBAR ===== -->
+  <nav>
+    <a class="nav-brand" href="#">
+      <img class="nav-brand-logo" src="logo-visualcampo.png" alt="VISUALCAMPO — Treinamento e Serviços" />
+      <div>
+        <span class="nav-logo-text">VISUAL<span>CAMPO</span></span>
+        <span class="nav-sub">Serviços de Engenharia Clínica</span>
+      </div>
+    </a>
+    <div class="nav-location">
+      <i class="fas fa-map-marker-alt"></i>
+      Ribeirão Preto – SP
+    </div>
+    <ul class="nav-menu">
+      <li><a href="#servicos">Serviços</a></li>
+      <li><a href="#viagens">Agenda RJ</a></li>
+      <li><a href="#diferenciais">Diferenciais</a></li>
+      <li><a href="#raices">Parceria</a></li>
+      <li><a href="https://wa.me/5519999548833?text=Olá%2C+Daniel!+Gostaria+de+falar+sobre+serviços+de+Engenharia+Clínica." target="_blank" class="nav-cta"><i class="fab fa-whatsapp"></i> Contato</a></li>
+    </ul>
+  </nav>
+
+  <!-- ===== HERO ===== -->
+  <section class="hero">
+    <div class="hero-visual">
+      <i class="fas fa-eye"></i>
+    </div>
+    <div class="hero-content">
+      <img class="hero-logo" src="logo-visualcampo.png" alt="VISUALCAMPO Treinamento e Serviços" />
+      <div class="hero-badge">
+        <i class="fas fa-certificate"></i>
+        Especialista Haag-Streit · Octopus · Zeiss
+      </div>
+      <h1>
+        <span class="accent">Serviços de Engenharia Clínica</span><br>
+        Oftalmológica de Alta Precisão
+      </h1>
+      <p>Manutenção, calibração, instalação e treinamento para perímetros Octopus e equipamentos de diagnóstico oftalmológico em todo o Brasil.</p>
+      <div class="hero-location">
+        <i class="fas fa-map-marker-alt"></i>
+        Ribeirão Preto – SP &nbsp;·&nbsp; Atendimento Nacional
+      </div>
+      <div class="hero-buttons">
+        <a class="btn btn-wa" href="https://wa.me/5519999548833?text=Olá%2C+Daniel!+Preciso+de+um+orçamento+para+serviços+de+Engenharia+Clínica+oftalmológica." target="_blank" rel="noopener">
+          <i class="fab fa-whatsapp"></i> Solicitar Orçamento
+        </a>
+        <a class="btn btn-outline" href="#servicos">
+          <i class="fas fa-tools"></i> Ver Serviços
+        </a>
+      </div>
+      <div class="hero-stats">
+        <div class="stat">
+          <div class="stat-number">20+</div>
+          <div class="stat-label">Anos de Exp.</div>
+        </div>
+        <div class="stat">
+          <div class="stat-number">500+</div>
+          <div class="stat-label">Equipamentos</div>
+        </div>
+        <div class="stat">
+          <div class="stat-number">Brasil</div>
+          <div class="stat-label">Cobertura</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== VIAGEM RJ ===== -->
+  <section class="travel-section" id="viagens">
+    <span class="section-label">📍 Agenda de Deslocamentos</span>
+    <h2 class="section-title">Próximas Visitas Técnicas — Região RJ</h2>
+    <p class="section-subtitle">Estaremos atendendo presencialmente na região. Vagas limitadas — agende com antecedência e garanta o seu horário.</p>
+
+    <div class="travel-cards">
+      <div class="travel-card">
+        <div class="travel-card-city">🏔️ Teresópolis</div>
+        <div class="travel-card-state">Rio de Janeiro – RJ</div>
+        <p>Atendimento presencial para clínicas, hospitais e consultórios oftalmológicos da região serrana do Rio de Janeiro. Manutenção de perímetros, calibração e suporte técnico especializado.</p>
+        <a class="btn btn-wa" href="https://wa.me/5519999548833?text=Olá%2C+Daniel!+Vi+que+você+estará+em+Teresópolis-RJ+e+gostaria+de+agendar+um+atendimento+técnico+para+meu+equipamento+oftalmológico." target="_blank" rel="noopener">
+          <i class="fab fa-whatsapp"></i> Agendar em Teresópolis
+        </a>
+      </div>
+
+      <div class="travel-card">
+        <div class="travel-card-city">🌾 Santo Antônio de Pádua</div>
+        <div class="travel-card-state">Rio de Janeiro – RJ</div>
+        <p>Visita técnica programada para a região norte-fluminense. Aproveitamos a rota para otimizar o atendimento a clínicas e hospitais que necessitam de suporte em engenharia clínica.</p>
+        <a class="btn btn-wa" href="https://wa.me/5519999548833?text=Olá%2C+Daniel!+Vi+que+você+estará+em+Santo+Antônio+de+Pádua-RJ+e+gostaria+de+agendar+um+atendimento+técnico." target="_blank" rel="noopener">
+          <i class="fab fa-whatsapp"></i> Agendar em Sto. Antônio de Pádua
+        </a>
+      </div>
+
+      <div class="travel-card" style="border-left-color: var(--azul-acento);">
+        <div class="travel-card-city" style="color: var(--azul-acento);">📡 Atendimento Remoto</div>
+        <div class="travel-card-state">Todo o Brasil</div>
+        <p>Suporte técnico remoto disponível para diagnósticos preliminares, orientações de operação e triagem de manutenção. Resolvemos muitos chamados sem deslocamento, com agilidade e economia.</p>
+        <a class="btn btn-primary" href="https://wa.me/5519999548833?text=Olá%2C+Daniel!+Preciso+de+suporte+técnico+remoto+para+meu+equipamento+oftalmológico." target="_blank" rel="noopener">
+          <i class="fab fa-whatsapp"></i> Suporte Remoto Agora
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== SERVIÇOS ===== -->
+  <section class="services-section" id="servicos">
+    <span class="section-label">🔧 O que fazemos</span>
+    <h2 class="section-title">Serviços de Engenharia Clínica Oftalmológica</h2>
+    <p class="section-subtitle">Cobertura técnica completa para equipamentos de diagnóstico visual, com rastreabilidade e padrão de fábrica internacional.</p>
+
+    <div class="services-grid">
+      <div class="service-card">
+        <div class="service-icon"><i class="fas fa-wrench"></i></div>
+        <h3>Manutenção Preventiva e Corretiva</h3>
+        <p>Revisões programadas e reparos emergenciais para Perímetros Octopus, campímetros e demais equipamentos oftalmológicos de diagnóstico.</p>
+        <a class="service-link" href="https://wa.me/5519999548833?text=Olá%2C+Daniel!+Preciso+de+manutenção+preventiva+e%2Fou+corretiva+para+meu+equipamento+oftalmológico." target="_blank" rel="noopener">
+          <i class="fab fa-whatsapp"></i> Solicitar via WhatsApp <i class="fas fa-arrow-right"></i>
+        </a>
+      </div>
+
+      <div class="service-card">
+        <div class="service-icon"><i class="fas fa-ruler-combined"></i></div>
+        <h3>Calibração e Validação de Laudos</h3>
+        <p>Calibração técnica seguindo padrões de fábrica Haag-Streit (Suíça), com emissão de relatório de conformidade e rastreabilidade metrológica.</p>
+        <a class="service-link" href="https://wa.me/5519999548833?text=Olá%2C+Daniel!+Preciso+de+calibração+e+validação+de+laudos+para+o+meu+perímetro+computadorizado." target="_blank" rel="noopener">
+          <i class="fab fa-whatsapp"></i> Solicitar via WhatsApp <i class="fas fa-arrow-right"></i>
+        </a>
+      </div>
+
+      <div class="service-card">
+        <div class="service-icon"><i class="fas fa-plug"></i></div>
+        <h3>Instalação e Start-up</h3>
+        <p>Instalação técnica, configuração e start-up de equipamentos novos, incluindo integração de software e testes de performance conforme especificações originais.</p>
+        <a class="service-link" href="https://wa.me/5519999548833?text=Olá%2C+Daniel!+Adquiri+um+equipamento+novo+e+preciso+de+instalação+e+start-up+especializado." target="_blank" rel="noopener">
+          <i class="fab fa-whatsapp"></i> Solicitar via WhatsApp <i class="fas fa-arrow-right"></i>
+        </a>
+      </div>
+
+      <div class="service-card">
+        <div class="service-icon"><i class="fas fa-chalkboard-teacher"></i></div>
+        <h3>Treinamento para Médicos e Operadores</h3>
+        <p>Capacitação técnica e operacional para equipes de clínicas e hospitais, maximizando o aproveitamento dos equipamentos e a qualidade dos exames.</p>
+        <a class="service-link" href="https://wa.me/5519999548833?text=Olá%2C+Daniel!+Tenho+interesse+em+treinamento+para+operadores+e+médicos+do+meu+equipamento+oftalmológico." target="_blank" rel="noopener">
+          <i class="fab fa-whatsapp"></i> Solicitar via WhatsApp <i class="fas fa-arrow-right"></i>
+        </a>
+      </div>
+
+      <div class="service-card">
+        <div class="service-icon"><i class="fas fa-laptop-medical"></i></div>
+        <h3>Suporte Técnico Remoto</h3>
+        <p>Diagnóstico e resolução remota de falhas operacionais e de software. Ideal para triagem de chamados antes de deslocamento presencial.</p>
+        <a class="service-link" href="https://wa.me/5519999548833?text=Olá%2C+Daniel!+Preciso+de+suporte+técnico+remoto+urgente+para+meu+equipamento." target="_blank" rel="noopener">
+          <i class="fab fa-whatsapp"></i> Suporte Remoto Agora <i class="fas fa-arrow-right"></i>
+        </a>
+      </div>
+
+      <div class="service-card">
+        <div class="service-icon"><i class="fas fa-file-contract"></i></div>
+        <h3>Contratos de Manutenção Preventiva</h3>
+        <p>Planos anuais de manutenção com visitas programadas, prioridade no atendimento e redução significativa de custos operacionais.</p>
+        <a class="service-link" href="https://wa.me/5519999548833?text=Olá%2C+Daniel!+Gostaria+de+conhecer+os+planos+de+contrato+de+manutenção+preventiva+anual." target="_blank" rel="noopener">
+          <i class="fab fa-whatsapp"></i> Solicitar via WhatsApp <i class="fas fa-arrow-right"></i>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== DIFERENCIAIS ===== -->
+  <section id="diferenciais">
+    <span class="section-label">⭐ Por que nos escolher</span>
+    <h2 class="section-title">Autoridade Técnica Comprovada</h2>
+    <p class="section-subtitle">Décadas de experiência exclusiva em engenharia clínica oftalmológica, com certificação e treinamento direto de fábrica.</p>
+
+    <div class="credentials-grid">
+      <div class="credential-item">
+        <div class="credential-icon"><i class="fas fa-certificate"></i></div>
+        <h4>Treinamento Haag-Streit</h4>
+        <p>Capacitação técnica oficial realizada nas instalações da Haag-Streit, Suíça — fabricante dos Perímetros Octopus.</p>
+      </div>
+      <div class="credential-item">
+        <div class="credential-icon"><i class="fas fa-eye"></i></div>
+        <h4>Especialista Octopus</h4>
+        <p>Profundo conhecimento de hardware, software e firmware das linhas Octopus 600, 900 e G-TOP.</p>
+      </div>
+      <div class="credential-item">
+        <div class="credential-icon"><i class="fas fa-map-marked-alt"></i></div>
+        <h4>Atendimento Nacional</h4>
+        <p>Cobertura em todo o território brasileiro. Deslocamentos programados e suporte remoto para qualquer estado.</p>
+      </div>
+      <div class="credential-item">
+        <div class="credential-icon"><i class="fas fa-shield-alt"></i></div>
+        <h4>Conformidade Regulatória</h4>
+        <p>Serviços alinhados às normas da ANVISA e boas práticas de engenharia clínica hospitalar.</p>
+      </div>
+      <div class="credential-item">
+        <div class="credential-icon"><i class="fas fa-bolt"></i></div>
+        <h4>Resposta Ágil</h4>
+        <p>Diagnóstico remoto em horas. Atendimento presencial planejado com eficiência logística para minimizar downtime.</p>
+      </div>
+      <div class="credential-item">
+        <div class="credential-icon"><i class="fas fa-handshake"></i></div>
+        <h4>Relacionamento Direto</h4>
+        <p>Atendimento personalizado com o engenheiro especialista diretamente — sem intermediários ou call centers.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== RAÍCES DEL AMOR — PARCERIA ===== -->
+  <section class="raices-section" id="raices">
+    <span class="section-label">🌿 Parceria de Cuidado Integral</span>
+    <h2 class="section-title">Cuidamos da Saúde dos Equipamentos.<br>E da Saúde das Pessoas.</h2>
+    <p class="section-subtitle">Uma indicação especial para quem busca também o cuidado humano e o autoconhecimento.</p>
+
+    <div class="raices-card">
+      <div class="raices-emoji">🌿</div>
+      <div class="raices-text">
+        <h3>Espaço Terapêutico RAÍCES DEL AMOR</h3>
+        <p>Um espaço de cura, autoconhecimento e evolução humana em Ribeirão Preto–SP. Conduzido por <strong>Elena Aberastain</strong> e uma equipe de terapeutas dedicados ao cuidado humanizado de crianças, jovens, adultos e idosos.</p>
+        <div class="raices-chips">
+          <span class="chip">Biomagnetismo</span>
+          <span class="chip">Constelação Familiar</span>
+          <span class="chip">Reiki</span>
+          <span class="chip">Reflexologia Podal</span>
+          <span class="chip">CNV</span>
+          <span class="chip">Autoconhecimento</span>
+          <span class="chip">Radiestesia</span>
+          <span class="chip">Terapias Multidimensionais</span>
+        </div>
+        <p><i class="fas fa-map-marker-alt" style="color:#4CAF50"></i> Rua Felipe Ache, 567 – Bairro São Luiz – Ribeirão Preto–SP</p>
+        <a class="btn btn-raices" href="https://wa.me/5519999548833?text=Olá!+Vi+a+indicação+do+Espaço+RAÍCES+DEL+AMOR+no+site+VISUALCAMPO+e+gostaria+de+saber+mais+sobre+as+terapias+disponíveis." target="_blank" rel="noopener">
+          <i class="fab fa-whatsapp"></i> Conhecer o Espaço Raíces
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== CTA FINAL ===== -->
+  <section class="cta-section" id="contato">
+    <span class="section-label" style="color: rgba(255,255,255,0.6)">📞 Fale Conosco</span>
+    <h2 class="section-title">Equipamento com Problema?<br>Fale Direto com o Especialista.</h2>
+    <p class="section-subtitle" style="margin: 0 auto 8px;">Atendimento direto, sem intermediários. Resposta rápida e solução eficaz.</p>
+    <p class="section-subtitle" style="margin: 0 auto;">
+      <i class="fas fa-map-marker-alt"></i> <strong style="color:white">Ribeirão Preto–SP</strong> &nbsp;|&nbsp; Atendimento em todo o Brasil
+    </p>
+    <div class="cta-buttons">
+      <a class="btn btn-wa" style="font-size: 1.05rem; padding: 16px 36px;" href="https://wa.me/5519999548833?text=Olá%2C+Daniel!+Preciso+de+suporte+em+Serviços+de+Engenharia+Clínica+para+meu+equipamento+oftalmológico." target="_blank" rel="noopener">
+        <i class="fab fa-whatsapp"></i> Chamar no WhatsApp Agora
+      </a>
+      <a class="btn btn-outline" href="https://wa.me/5519999548833?text=Olá%2C+Daniel!+Estou+interessado+em+um+contrato+de+manutenção+preventiva+anual." target="_blank" rel="noopener">
+        <i class="fas fa-file-signature"></i> Solicitar Contrato Anual
+      </a>
+    </div>
+  </section>
+
+  <!-- ===== FOOTER ===== -->
+  <footer>
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <h3>VISUALCAMPO</h3>
+        <p>Serviços de Engenharia Clínica Oftalmológica com padrão de excelência internacional. Especialistas em perímetros Octopus e equipamentos de diagnóstico visual.</p>
+        <div class="footer-location">
+          <i class="fas fa-map-marker-alt"></i>
+          <span>Ribeirão Preto – SP | Atendimento Nacional</span>
+        </div>
+        <div class="footer-location">
+          <i class="fab fa-whatsapp" style="color: var(--verde-wa)"></i>
+          <a href="https://wa.me/5519999548833" target="_blank" class="footer-wa-link">+55 (19) 99954-8833</a>
+        </div>
+        <div class="footer-location">
+          <i class="fas fa-globe"></i>
+          <span>www.visualcampo.com.br</span>
+        </div>
+      </div>
+
+      <div class="footer-col">
+        <h4>Serviços</h4>
+        <ul class="footer-links">
+          <li><a href="https://wa.me/5519999548833?text=Olá!+Preciso+de+manutenção+corretiva+para+meu+equipamento." target="_blank">Manutenção Corretiva</a></li>
+          <li><a href="https://wa.me/5519999548833?text=Olá!+Preciso+de+manutenção+preventiva+para+meu+equipamento." target="_blank">Manutenção Preventiva</a></li>
+          <li><a href="https://wa.me/5519999548833?text=Olá!+Preciso+de+calibração+para+meu+perímetro." target="_blank">Calibração e Validação</a></li>
+          <li><a href="https://wa.me/5519999548833?text=Olá!+Preciso+de+instalação+de+equipamento+novo." target="_blank">Instalação e Start-up</a></li>
+          <li><a href="https://wa.me/5519999548833?text=Olá!+Tenho+interesse+em+treinamento+técnico." target="_blank">Treinamentos</a></li>
+          <li><a href="https://wa.me/5519999548833?text=Olá!+Preciso+de+suporte+remoto+agora." target="_blank">Suporte Remoto</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h4>Agenda RJ</h4>
+        <ul class="footer-links">
+          <li><a href="https://wa.me/5519999548833?text=Olá!+Quero+agendar+atendimento+em+Teresópolis-RJ." target="_blank">📍 Teresópolis–RJ</a></li>
+          <li><a href="https://wa.me/5519999548833?text=Olá!+Quero+agendar+atendimento+em+Santo+Antônio+de+Pádua-RJ." target="_blank">📍 Sto. Antônio de Pádua–RJ</a></li>
+          <li><a href="https://wa.me/5519999548833?text=Olá!+Quero+agendar+suporte+remoto." target="_blank">📡 Suporte Remoto</a></li>
+        </ul>
+        <br />
+        <h4>Contato Direto</h4>
+        <ul class="footer-links">
+          <li>
+            <a href="https://wa.me/5519999548833" target="_blank" class="footer-wa-link">
+              <i class="fab fa-whatsapp"></i> WhatsApp Daniel
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="footer-raices">
+      <span>🌿</span>
+      <p>Parceiro de bem-estar:</p>
+      <a href="https://wa.me/5519999548833?text=Olá!+Gostaria+de+saber+mais+sobre+o+Espaço+Terapêutico+RAÍCES+DEL+AMOR+em+Ribeirão+Preto." target="_blank">
+        Espaço Terapêutico RAÍCES DEL AMOR
+      </a>
+      <span style="color: rgba(255,255,255,0.3)">·</span>
+      <p>Elena Aberastain · Ribeirão Preto–SP · Rua Felipe Ache, 567 – Bairro São Luiz</p>
+    </div>
+
+    <div class="footer-bottom">
+      <span>© 2026 VISUALCAMPO — Serviços de Engenharia Clínica. Ribeirão Preto–SP.</span>
+      <span>Atendimento Nacional · <a href="https://wa.me/5519999548833" target="_blank" style="color: var(--verde-wa); text-decoration: none;">+55 (19) 99954-8833</a></span>
+    </div>
+  </footer>
+
+  <!-- ===== WHATSAPP FAB ===== -->
+  <a class="wa-fab" href="https://wa.me/5519999548833?text=Olá%2C+Daniel!+Preciso+de+atendimento+em+Serviços+de+Engenharia+Clínica+oftalmológica." target="_blank" rel="noopener" title="Chamar no WhatsApp">
+    <i class="fab fa-whatsapp"></i>
+  </a>
+
+</body>
+</html>

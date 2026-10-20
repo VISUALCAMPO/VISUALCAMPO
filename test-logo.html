@@ -1,0 +1,24 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+<style>
+body { background: #0a1f3c; color: white; font-family: sans-serif; padding: 40px; }
+.card { margin: 20px 0; padding: 20px; border: 1px solid #333; }
+.spotlight {
+  background: radial-gradient(circle at center, rgba(255,255,255,0.18) 0%, rgba(10,31,60,0) 65%);
+  padding: 30px;
+  display: inline-block;
+}
+</style>
+</head>
+<body>
+  <h2>Test 1: Pure transparent on #0a1f3c with soft backlight</h2>
+  <div class="card spotlight">
+    <img src="logo-visualcampo.png" style="height: 90px; filter: drop-shadow(0 0 15px rgba(255,255,255,0.5)) drop-shadow(0 0 1px rgba(255,255,255,0.8));" />
+  </div>
+  <h2>Test 2: Navbar scale (height 44px)</h2>
+  <div class="card" style="background: #0a1f3c;">
+    <img src="logo-visualcampo.png" style="height: 44px; filter: drop-shadow(0 0 8px rgba(255,255,255,0.75)) drop-shadow(0 0 1px #fff);" />
+  </div>
+</body>
+</html>
